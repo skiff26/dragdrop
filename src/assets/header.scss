@@ -1,0 +1,152 @@
+.header {
+	height: 55px;
+	border-bottom: 1px solid #363636;
+	border-top: 1px solid #363636;
+	&__container {
+		height: inherit;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.6;
+		}
+		img {
+			height: 24px;
+			width: 24px;
+		}
+		span {
+			padding-left: 8px;
+		}
+	}
+
+	&__menu {
+		display: none;
+		@media (max-width: 550px) {
+			display: block;
+		}
+	}
+}
+.nav {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	@media (max-width: 550px) {
+		display: none;
+	}
+	&__list {
+		display: flex;
+		height: 100%;
+	}
+
+	&__list-item {
+		height: 100%;
+		a {
+			display: inline-flex;
+			align-items: center;
+			padding: 0 15px;
+			height: 100%;
+			color: #e1e1e1;
+			transition: all 0.3s ease 0s;
+			font-weight: 500;
+			line-height: 1.5;
+			@media (max-width: 650px) {
+				padding: 0 10px;
+			}
+			&.nav-item-active {
+				height: calc(100% - 1px);
+				border-bottom: 1px solid #42b883;
+			}
+			&:hover {
+				color: #42b883;
+			}
+		}
+	}
+
+	&__line {
+		height: 24px;
+		width: 1px;
+		background: #363636;
+		margin: 0 40px;
+		@media (max-width: 650px) {
+			margin: 0 20px;
+		}
+	}
+
+	&__media {
+		display: flex;
+		gap: 20px;
+		@media (max-width: 650px) {
+			gap: 10px;
+		}
+	}
+
+	&__media-item {
+		a svg {
+			transition: all 0.3s ease 0s;
+			&:hover {
+				fill: white;
+			}
+		}
+	}
+}
+
+.nav-popup {
+	position: absolute;
+	width: 100vw;
+	min-height: 320px;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: #1a1a1a;
+	&__header {
+		height: 55px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid #363636;
+		border-top: 1px solid #363636;
+		padding: 15px;
+		span {
+			font-size: 24px;
+		}
+	}
+
+	&__body {
+	}
+
+	&__list {
+		margin: 20px 0 40px;
+	}
+
+	&__list-item {
+		text-align: center;
+		a {
+			color: #e1e1e1;
+			font-size: 24px;
+			line-height: 2;
+		}
+	}
+
+	&__media {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+	}
+
+	&__media-item {
+		a svg {
+			transition: all 0.3s ease 0s;
+			&:hover {
+				fill: white;
+			}
+		}
+	}
+}
