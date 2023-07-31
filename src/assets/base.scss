@@ -74,11 +74,11 @@ body,html{
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #1a1a1a;
 }
-.wrapper{
+.wrapper {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	min-height: 100vh;
 }
 .main{
 	flex: 1 1 auto;

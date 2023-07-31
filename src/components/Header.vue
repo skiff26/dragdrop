@@ -55,7 +55,7 @@ const navitationElements = [
 	{
 		name: 'Docs',
 		link: '/',
-		status: true
+		status: false
 	},
 	{
 		name: 'Examples',
