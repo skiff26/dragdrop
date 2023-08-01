@@ -1,0 +1,1 @@
+import{S as e}from"./StubSection-1999aff1.js";import{o as t,c as o,a}from"./index-2eb52171.js";const c={class:"main__container"},m={__name:"AboutView",setup(r){return(s,n)=>(t(),o("div",c,[a(e)]))}};export{m as default};
