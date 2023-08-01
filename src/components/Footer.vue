@@ -15,6 +15,10 @@
 	padding: 25px;
 	text-align: center;
 	max-height: 88px;
+	@media (max-width: 425px) {
+		font-size: 14px;
+		padding: 23px;
+	}
 	a {
 		transition: all 0.3s ease 0s;
 		color: white;
