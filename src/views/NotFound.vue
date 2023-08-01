@@ -1,12 +1,10 @@
 <template>
-	<main class="main">
-		<div class="main__container">
-			<h1 class="main__title">Page Not Found</h1>
-			<p class="main__text">You found a dead link: <span>{{ $route.fullPath }}</span></p>
-			<br />
-			<p class="main__redirect">Redirect to <router-link to="/">main</router-link> page.</p>
-		</div>
-	</main>
+	<div class="main__container">
+		<h1 class="main__title">Page Not Found</h1>
+		<p class="main__text">You found a dead link: <span>{{ $route.fullPath }}</span></p>
+		<br />
+		<p class="main__redirect">Redirect to <router-link to="/">main</router-link> page.</p>
+	</div>
 </template>
 
 <style scoped lang="scss">

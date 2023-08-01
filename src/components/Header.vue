@@ -21,24 +21,26 @@
 			<div class="header__menu">
 				<BaseIcon name="menu" wh="30" @click="toggleMobileNav()"/>
 			</div>
-			<div class="header__nav-popup nav-popup" v-if="isMobileNavOpen">
-				<div class="nav-popup__header">
-					<span>Menu</span>
-					<BaseIcon name="close" wh="30" @click="toggleMobileNav()"/>
+			<transition name="nav">
+				<div class="header__nav-popup nav-popup" v-if="isMobileNavOpen">
+					<div class="nav-popup__header">
+						<span>Menu</span>
+						<BaseIcon name="close" wh="30" @click="toggleMobileNav()"/>
+					</div>
+					<div class="nav-popup__body">
+						<ul class="nav-popup__list">
+							<li class="nav-popup__list-item" v-for="item in navitationElements" :key="item.name">
+								<a :class="{'nav-popup-item-active' : item.status}" :href="item.link">{{ item.name }}</a>
+							</li>
+						</ul>
+						<ul class="nav-popup__media">
+							<li class="nav-popup__media-item" v-for="item in mediaElements" :key="item.name">
+								<a :href="item.link" target="_blank"><BaseIcon :name="item.name" wh="30"/></a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="nav-popup__body">
-					<ul class="nav-popup__list">
-						<li class="nav-popup__list-item" v-for="item in navitationElements" :key="item.name">
-							<a :class="{'nav-popup-item-active' : item.status}" :href="item.link">{{ item.name }}</a>
-						</li>
-					</ul>
-					<ul class="nav-popup__media">
-						<li class="nav-popup__media-item" v-for="item in mediaElements" :key="item.name">
-							<a :href="item.link" target="_blank"><BaseIcon :name="item.name" wh="30"/></a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			</transition>
 		</div>
 	</header>
 </template>
@@ -54,12 +56,12 @@ const toggleMobileNav = () => {
 const navitationElements = [
 	{
 		name: 'Docs',
-		link: '/',
+		link: '/docs',
 		status: false
 	},
 	{
 		name: 'Examples',
-		link: '/exemples',
+		link: '/examples',
 		status: false
 	},
 	{
@@ -83,3 +85,19 @@ const mediaElements = [
 	},
 ]
 </script> 
+
+<style scoped>
+.nav-enter-active,
+.nav-leave-active {
+  transition: all 0.3s ease;
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+.nav-enter-from,
+.nav-leave-to {
+  opacity: 0;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+}
+</style>
