@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as o,p as c,b as _,d as n}from"./index-d4c05866.js";const a={},d=e=>(c("data-v-2347e8b2"),e=e(),_(),e),p={class:"stub"},i=d(()=>n("h1",null,"This page is under development.",-1)),r=[i];function u(e,l){return t(),o("section",p,r)}const S=s(a,[["render",u],["__scopeId","data-v-2347e8b2"]]);export{S};
