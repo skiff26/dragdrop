@@ -1,8 +1,23 @@
 <template>
 	<div class="main__container">
-		<StubSection />
+		<h1 class="main__title">About</h1>
+		<AboutLibrary />
+		<AboutTeam />
 	</div>
 </template>
 <script setup>
-import StubSection from '../components/StubSection.vue';
+import AboutLibrary from '@/components/about/AboutLibrary.vue';
+import AboutTeam from '@/components/about/AboutTeam.vue';
 </script>
+<style scoped lang="scss">
+.main {
+	&__title {
+		margin-top: 40px;
+		font-size: 40px;
+		color: #ffffffde;
+		font-weight: 900;
+		letter-spacing: 5px;
+		text-align: center;
+	}
+}
+</style>

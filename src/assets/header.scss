@@ -20,6 +20,7 @@
 		img {
 			height: 24px;
 			width: 24px;
+			user-select: none;
 		}
 		span {
 			padding-left: 8px;
@@ -101,11 +102,12 @@
 .nav-popup {
 	position: absolute;
 	width: 100vw;
-	min-height: 320px;
+	height: 100%;
 	top: 0;
 	left: 0;
 	z-index: 5;
 	background-color: #1a1a1a;
+	overflow: auto;
 	&__header {
 		height: 55px;
 		display: flex;
@@ -124,7 +126,9 @@
 	}
 
 	&__list-item {
-		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+		border-bottom: 1px solid #363636;
 		a {
 			color: #e1e1e1;
 			font-size: 24px;

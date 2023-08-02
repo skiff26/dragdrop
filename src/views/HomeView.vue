@@ -1,7 +1,7 @@
 <script setup>
-import HomeWelcome from '@/components/HomeWelcome.vue';
-import HomeSponsors from '@/components/HomeSponsors.vue';
-import HomeInfo from '@/components/HomeInfo.vue';
+import HomeWelcome from '@/components/home/HomeWelcome.vue';
+import HomeSponsors from '@/components/home/HomeSponsors.vue';
+import HomeInfo from '@/components/home/HomeInfo.vue';
 </script>
 
 <template>

@@ -1,24 +1,17 @@
 <template>
 	<div class="main__container">
-		<h1 class="main__title">Page Not Found</h1>
-		<p class="main__text">You found a dead link: <span>{{ $route.fullPath }}</span></p>
-		<br />
-		<p class="main__redirect">Redirect to <router-link to="/">main</router-link> page.</p>
+		<section class="not-found">
+			<h1 class="main__title">Page Not Found</h1>
+			<p class="main__text">You found a dead link: <span>{{ $route.fullPath }}</span></p>
+			<br />
+			<p class="main__redirect">Redirect to <router-link to="/">main</router-link> page.</p>
+		</section>
 	</div>
 </template>
 
 <style scoped lang="scss">
 .main {
 	color: #e3e3e3;
-	margin: 30px;
-	@media (max-width: 400px) {
-		margin: 20px 15px;
-	}
-	&__container {
-		background: #242424;
-		padding: 30px;
-		border-radius: 8px;
-	}
 	&__title {
 		font-size: 38px;
 		line-height: 1.4;
@@ -27,7 +20,7 @@
 		margin-bottom: 40px;
 		@media (max-width: 400px) {
 			margin-bottom: 30px;
-			font-size: 34px;
+			font-size: 32px;
 		}
 	}
 
@@ -52,5 +45,13 @@
 		}
 	}
 }
-
+.not-found {
+	background: #242424;
+	padding: 30px;
+	border-radius: 8px;
+	margin: 30px;
+	@media (max-width: 440px) {
+		margin: 20px 0px;
+	}
+}
 </style>
