@@ -8,7 +8,7 @@
 			<nav class="header__nav nav">
 				<ul class="nav__list">
 					<li class="nav__list-item" v-for="item in navitationElements" :key="item.name">
-						<a :class="{'nav-item-active' : item.status}" :href="item.link">{{ item.name }}</a>
+						<router-link :class="{'nav-item-active' : item.status}" :to="{ name: item.link }">{{ item.name }}</router-link>
 					</li>
 				</ul>
 				<span class="nav__line"></span>
@@ -29,8 +29,8 @@
 					</div>
 					<div class="nav-popup__body">
 						<ul class="nav-popup__list">
-							<li class="nav-popup__list-item" v-for="item in navitationElements" :key="item.name">
-								<a :class="{'nav-popup-item-active' : item.status}" :href="item.link">{{ item.name }}</a>
+							<li class="nav-popup__list-item" v-for="item in navitationElements" :key="item.name" @click="isMobileNavOpen = false">
+								<router-link :class="{'nav-popup-item-active' : item.status}" :to="{ name: item.link }">{{ item.name }}</router-link>
 							</li>
 						</ul>
 						<ul class="nav-popup__media">
@@ -56,17 +56,17 @@ const toggleMobileNav = () => {
 const navitationElements = [
 	{
 		name: 'Docs',
-		link: '/docs',
+		link: "docs",
 		status: false
 	},
 	{
 		name: 'Examples',
-		link: '/examples',
+		link: 'examples',
 		status: false
 	},
 	{
 		name: 'About',
-		link: '/about',
+		link: 'about',
 		status: false
 	}
 ]

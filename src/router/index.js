@@ -1,8 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+//   history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
@@ -41,7 +42,7 @@ router.beforeEach((to, from, next) => {
 	if (to.query.title) {
 		document.title = `${ to.query.title }`
 	} else {
-		document.title = to.meta.title === 'Drag & Drop' ? `Vue.js:  - ${to.meta.title}` : `${to.meta.title} | Vue.js - Drag & Drop`;
+		document.title = to.meta.title === 'Drag & Drop' ? `Vue.js - ${to.meta.title}` : `${to.meta.title} | Vue.js - Drag & Drop`;
 	}
 	next()
 })

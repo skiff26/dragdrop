@@ -12,13 +12,13 @@
 	background: #242424;
 	border-radius: 8px;
 	h1 {
-		font-size: 40px;
+		font-size: 30px;
 	}
 	@media (max-width: 670px) {
 		margin: 20px 0px;
 		padding: 20px;
 		h1 {
-			font-size: 30px;
+			font-size: 23px;
 			line-height: 1.3;
 		}
 	}

@@ -3,7 +3,7 @@
 		<h1 class="section__title">Drag And Drop<br>For Vue.js Framework</h1>
 		<p class="section__description">Ready to use Drag and Drop components.</p>
 		<div class="section__buttons">
-			<router-link to="/docs"><span>Get Started</span> <BaseIcon name="rightArrowShort" color="#aac8e4" wh="25"/></router-link>
+			<router-link to="/docs"><span>Get Started</span> <BaseIcon name="rightArrowShort" color="#aac8e4" wh="20"/></router-link>
 		</div>
 	</section>
 </template>
@@ -78,14 +78,14 @@ import BaseIcon from '@/components/BaseIcon.vue';
 			position: relative;
 			svg {
 				position: absolute;
-				top: 7px;
-				right: 13px;
-				transition: all 0.1s ease 0s;
+				top: 10px;
+				right: 15px;
+				transition: all 0.2s ease 0s;
 			}
 			&:hover {
 				background: #3a3a3a;
 				svg {
-					right: 10px;
+					right: 12px;
 				}
 			}
 		}
