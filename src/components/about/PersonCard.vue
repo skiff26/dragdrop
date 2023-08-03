@@ -1,7 +1,7 @@
 <template>
 	<article class="card" v-for="person in team" :key="person.name">
 		<figure class="card__image">
-			<a :href="person.media.linkedin" target="_blank"><img :src="`/about/${person.img}.jpg`" :alt="person.name"></a>
+			<a :href="person.media.linkedin" target="_blank"><img :src="`./about/${person.img}.jpg`" :alt="person.name"></a>
 		</figure>
 		<div class="card__info">
 			<h3 class="card__name">{{ person.name }}</h3>
