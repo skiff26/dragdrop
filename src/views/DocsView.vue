@@ -1,6 +1,6 @@
 <template>
 	<div class="main__container">
-		<StubSection />
+		<StubSection margin/>
 	</div>
 </template>
 <script setup>
