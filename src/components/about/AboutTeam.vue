@@ -42,7 +42,7 @@ const team = [
 		margin-bottom: 40px;
 	}
 	&__title {
-		color: #ffffffde;
+		color: var(--base-white);
 		font-size: 30px;
 		text-align: center;
 		margin-bottom: 20px;

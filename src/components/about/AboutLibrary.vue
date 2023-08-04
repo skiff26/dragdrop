@@ -31,7 +31,7 @@
 		padding: 30px 20px;
 	}
 	&__title {
-		color: #ffffffde;
+		color: var(--base-white);
 		font-size: 30px;
 		text-align: center;
 		margin-bottom: 20px;
@@ -39,7 +39,7 @@
 	}
 
 	&__text {
-		color: #ebebeb99;
+		color: var(--base-grey);
 		line-height: 1.4;
 		strong {
 			color: rgba(255, 255, 255, 0.767);

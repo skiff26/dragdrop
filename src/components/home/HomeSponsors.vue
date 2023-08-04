@@ -13,8 +13,7 @@
 	border-top: 1px solid #363636;
 	&__here {
 		font-weight: 500;
-		font-style: 14px;
-		color: #ebebeb99;
+		color: var(--base-grey);
 	}
 }
 

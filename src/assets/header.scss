@@ -63,10 +63,10 @@
 			}
 			&.nav-item-active {
 				height: calc(100% - 1px);
-				border-bottom: 1px solid #42b883;
+				border-bottom: 1px solid var(--base-green);
 			}
 			&:hover {
-				color: #42b883;
+				color: var(--base-green);
 			}
 		}
 	}

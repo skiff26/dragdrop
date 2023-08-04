@@ -45,11 +45,11 @@ const articles = [
 	&:hover {
 		background: #42b883;
 		p {
-			color: #ffffffde;
+			color: var(--base-white);
 		}
 	}
 	h2 {
-		color: #ffffffde;
+		color: var(--base-white);
 		font-size: 20px;
 		font-weight: 600;
 		margin-bottom: 15px;

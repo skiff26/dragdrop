@@ -54,7 +54,7 @@ const props = defineProps({
 	&__name {
 		font-size: 20px;
 		font-weight: 500;
-		color: #ffffffde;
+		color: var(--base-white);
 	}
 
 	&__org {
@@ -64,7 +64,7 @@ const props = defineProps({
 		font-weight: 500;
 		color: #ebebeb99;
 		span {
-			color: #ffffffde;
+			color: var(--base-white);
 		}
 	}
 
@@ -79,14 +79,14 @@ const props = defineProps({
 				margin-bottom: 10px;
 			}
 			address {
-				color: #ffffffde;
+				color: var(--base-white);
 				font-style: normal;
 			}
 			a {
-				color: #42b883;
+				color: var(--base-green);
 				transition: color 0.3s ease 0s;
 				&:hover {
-					color: #33a06f;
+					color: var(--base-green-hover);
 				}
 			}
 		}
