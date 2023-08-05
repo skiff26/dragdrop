@@ -1,0 +1,1 @@
+import{S as e}from"./StubSection-46a1da01.js";import{o as t,c as a,e as o,b as s}from"./index-6d2733e2.js";const c={class:"main__example example"},_=s("h1",{class:"example__title"},"Trello Example",-1),i={__name:"TrelloView",setup(l){return(r,m)=>(t(),a("section",c,[_,o(e)]))}};export{i as default};
