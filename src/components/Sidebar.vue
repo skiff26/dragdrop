@@ -3,7 +3,7 @@
 		<div class="aside__group" v-for="group in groups" :key="group.title">
 			<h2 class="aside__group-title">{{ group.title }}</h2>
 			<nav class="aside__nav">
-				<router-link :to="item.link" v-for="item in group.links">{{ item.name }}</router-link>
+				<router-link :to="{ name: item.link }" :class="{'active' : item.link === $route.name }" v-for="item in group.links">{{ item.name }}</router-link>
 			</nav>
 		</div>
 	</aside>
@@ -58,12 +58,14 @@ defineProps({
 			font-size: 14px;
 			transition: all 0.3s ease 0s;
 			padding: 3px 0;
-			&.active-sidebar-element {
+			&.active {
 				color: var(--base-green);
 			}
-			&:hover {
-				color: var(--base-white);
-			}
+			&:not(.active) {
+            &:hover {
+                color: var(--base-white);
+            }
+        	}
 		}
 	}
 }

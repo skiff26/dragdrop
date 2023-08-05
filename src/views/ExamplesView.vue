@@ -2,14 +2,12 @@
 	<div class="main__container">
 		<div class="main__content">
 			<Sidebar :groups="groups" />
-			<section class="main__example example">
-				<StubSection />
-			</section>
+			<RouterView />
 		</div>
 	</div>
 </template>
 <script setup>
-import StubSection from '@/components/StubSection.vue';
+import { RouterView } from 'vue-router'
 import Sidebar from '@/components/Sidebar.vue'
 
 const groups = [

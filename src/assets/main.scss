@@ -1,2 +1,18 @@
 @import './base.scss';
 @import './header.scss';
+
+.example {
+	&__title {
+		font-size: 38px;
+		line-height: 1.4;
+		font-weight: 600;
+		margin-bottom: 30px;
+		@media (max-width: 768px) {
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+		@media (max-width: 370px) {
+			font-size: 28px;
+		}
+	}
+}

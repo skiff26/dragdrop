@@ -21,7 +21,30 @@ const router = createRouter({
       path: '/examples',
       name: 'examples',
       component: () => import('../views/ExamplesView.vue'),
-		meta: { title: 'Examples' }
+		meta: { title: 'Examples' },
+		redirect: () => { return { name: 'simple' } },
+		children: [
+			{
+				path: 'simple',
+				name: 'simple',
+				component: () => import('../views/examples/SimpleView.vue'),
+			},
+			{
+				path: 'trello',
+				name: 'trello',
+				component: () => import('../views/examples/TrelloView.vue'),
+			},
+			{
+				path: 'avatar',
+				name: 'avatar',
+				component: () => import('../views/examples/AvatarView.vue'),
+			},
+			{
+				path: 'upload',
+				name: 'upload',
+				component: () => import('../views/examples/UploadView.vue'),
+			}
+		]
     },
 	 {
       path: '/docs',

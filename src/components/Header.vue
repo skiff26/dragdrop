@@ -8,7 +8,7 @@
 			<nav class="header__nav nav">
 				<ul class="nav__list">
 					<li class="nav__list-item" v-for="item in navitationElements" :key="item.name">
-						<router-link :class="{'nav-item-active' : item.link === $route.name}" :to="{ name: item.link }">{{ item.name }}</router-link>
+						<router-link :class="{'nav-item-active' : item.link === $route.matched[0]?.name}" :to="{ name: item.link }">{{ item.name }}</router-link>
 					</li>
 				</ul>
 				<span class="nav__line"></span>

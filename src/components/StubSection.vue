@@ -21,7 +21,9 @@ defineProps({
 	border-radius: 8px;
 	&.withMargin {
 		margin: 30px auto;
-		margin: 20px 0px;
+		@media (max-width: 670px) {
+			margin: 20px 0px;
+		}
 	}
 	h1 {
 		font-size: 30px;
