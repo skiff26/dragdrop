@@ -1,6 +1,6 @@
-# drag&drop
+# Drag And Drop Components for Vue.js
 
-This template should help get you started developing with Vue 3 in Vite.
+Improve Your Web App with Seamless Drag and Drop Integration.
 
 ## Recommended IDE Setup
 

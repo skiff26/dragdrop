@@ -1,9 +1,9 @@
 <template>
 	<section class="main__section section">
-		<h1 class="section__title">Drag And Drop<br>For Vue.js Framework</h1>
-		<p class="section__description">Ready to use Drag and Drop components.</p>
+		<h1 class="section__title">Drag And Drop<br>Components for Vue.js</h1>
+		<p class="section__description">Improve Your Web App with Seamless Drag and Drop Integration!</p>
 		<div class="section__buttons">
-			<router-link to="/docs"><span>Get Started</span> <BaseIcon name="rightArrowShort" color="#aac8e4" wh="20"/></router-link>
+			<router-link :to="{ name: 'examples' }"><span>Get Started</span> <BaseIcon name="rightArrowShort" color="#aac8e4" wh="20"/></router-link>
 		</div>
 	</section>
 </template>

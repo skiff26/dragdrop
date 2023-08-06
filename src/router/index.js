@@ -65,7 +65,7 @@ router.beforeEach((to, from, next) => {
 	if (to.query.title) {
 		document.title = `${ to.query.title }`
 	} else {
-		document.title = to.meta.title === 'Drag & Drop' ? `Vue.js - ${to.meta.title}` : `${to.meta.title} | Vue.js - Drag & Drop`;
+		document.title = to.meta.title === 'Drag & Drop' ? `Vue.js - Ready to Use ${to.meta.title} components` : `${to.meta.title} | Vue.js - Drag & Drop`;
 	}
 	next()
 })

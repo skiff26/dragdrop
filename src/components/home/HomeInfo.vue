@@ -11,7 +11,7 @@
 const articles = [
 	{
 		title: "Library essence",
-		text: "Vue.js Drag and Drop - an effortless solution to implement interactive element dragging in your web application. Simply copy and paste the code without the need for any additional installations."
+		text: "Vue.js Drag and Drop is a simple, ready-to-use solution for adding drag-and-drop functionality to your web application. You can easily integrate it by simply copying and pasting our pre-built components."
 	},
 	{
 		title: "User-friendly experience",
@@ -19,7 +19,7 @@ const articles = [
 	},
 	{
 		title: "No extra installations",
-		text: "With Vue.js Drag and Drop, there's no hassle of additional dependencies. Easily integrate our library into your project and enjoy seamless element dragging."
+		text: "With Vue.js Drag and Drop, there's no hassle of additional dependencies. Easily integrate our components into your project and enjoy seamless element dragging."
 	},
 ]
 </script>
