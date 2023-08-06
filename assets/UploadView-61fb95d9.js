@@ -1,0 +1,1 @@
+import{S as e}from"./StubSection-16d8bc43.js";import{o as a,c as t,e as o,b as s}from"./index-5302de6b.js";const c={class:"main__example example"},_=s("h1",{class:"example__title"},"Upload Files Example",-1),i={__name:"UploadView",setup(l){return(p,r)=>(a(),t("section",c,[_,o(e)]))}};export{i as default};
