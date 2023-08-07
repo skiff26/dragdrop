@@ -35,6 +35,21 @@ const router = createRouter({
 				component: () => import('../views/examples/TrelloView.vue'),
 			},
 			{
+				path: 'clone',
+				name: 'clone',
+				component: () => import('../views/examples/CloneView.vue'),
+			},
+			{
+				path: 'customclone',
+				name: 'customclone',
+				component: () => import('../views/examples/CustomCloneView.vue'),
+			},
+			{
+				path: 'trash',
+				name: 'trash',
+				component: () => import('../views/examples/TrashView.vue'),
+			},
+			{
 				path: 'avatar',
 				name: 'avatar',
 				component: () => import('../views/examples/AvatarView.vue'),

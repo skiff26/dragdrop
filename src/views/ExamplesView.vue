@@ -12,14 +12,27 @@ import Sidebar from '@/components/Sidebar.vue'
 
 const groups = [
 	{
-		title: 'Basic',
+		title: 'One list',
 		links: [
 			{ name: 'Simple', link: 'simple' },
 			{ name: 'Trello', link: 'trello' },
+		]
+	},
+	{
+		title: 'Two lists',
+		links: [
+			{ name: 'Clone', link: 'clone' },
+			{ name: 'Custom clone', link: 'customclone' },
+		]
+	},
+	{
+		title: 'Elements',
+		links: [
+			{ name: 'Trash', link: 'trash' },
 			{ name: 'Avatar', link: 'avatar' },
 			{ name: 'File upload', link: 'upload' }
 		]
-	}
+	}, 
 ]
 </script>
 

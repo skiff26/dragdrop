@@ -61,11 +61,13 @@ defineProps({
 			&.active {
 				color: var(--base-green);
 			}
-			&:not(.active) {
-            &:hover {
-                color: var(--base-white);
-            }
-        	}
+			@media (min-width: 425px) {
+				&:not(.active) {
+					&:hover {
+						color: var(--base-white);
+					}
+				}
+			}
 		}
 	}
 }
