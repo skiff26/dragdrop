@@ -22,7 +22,7 @@ const groups = [
 		title: 'Two lists',
 		links: [
 			{ name: 'Clone', link: 'clone' },
-			{ name: 'Custom clone', link: 'customclone' },
+			{ name: 'Clone on control', link: 'controlclone' },
 		]
 	},
 	{

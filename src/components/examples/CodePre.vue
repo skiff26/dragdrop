@@ -1,13 +1,19 @@
 <template>
 	<div class="code">
 		<pre>{{ items }}</pre>
+		<pre v-if="items2">{{ items2 }}</pre>
 	</div>
 </template>
 
 <script setup>
 defineProps({
-	items: Array,
-	required: true
+	items: {
+		type: Array,
+		required: true
+	},
+	items2: {
+		type: Array
+	}
 })
 </script>
 
@@ -18,9 +24,15 @@ defineProps({
 	margin: 30px auto;
 	background-color: #242424;
 	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
 	@media (max-width: 768px) {
 		padding: 15px;
 		margin: 15px auto;
+	}
+	@media (max-width: 520px) {
+		flex-direction: column;
+		row-gap: 15px;
 	}
 	pre {
 		text-align: left;

@@ -40,9 +40,9 @@ const router = createRouter({
 				component: () => import('../views/examples/CloneView.vue'),
 			},
 			{
-				path: 'customclone',
-				name: 'customclone',
-				component: () => import('../views/examples/CustomCloneView.vue'),
+				path: 'controlclone',
+				name: 'controlclone',
+				component: () => import('../views/examples/ControlCloneView.vue'),
 			},
 			{
 				path: 'trash',
