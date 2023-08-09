@@ -1,0 +1,1 @@
+import{S as e}from"./StubSection-d521e75d.js";import{o as a,c as t,e as s,b as o}from"./index-341ed069.js";const c={class:"main__example example"},_=o("h1",{class:"example__title"},"Avatar Example",-1),i={__name:"AvatarView",setup(r){return(m,n)=>(a(),t("section",c,[_,s(e)]))}};export{i as default};
