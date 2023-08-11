@@ -1,1 +1,0 @@
-import{S as e}from"./StubSection-d521e75d.js";import{o,c as t,e as a,b as s}from"./index-341ed069.js";const c={class:"main__example example"},_=s("h1",{class:"example__title"},"Custom Clone Example",-1),i={__name:"ControlCloneView",setup(n){return(l,r)=>(o(),t("section",c,[_,a(e)]))}};export{i as default};
