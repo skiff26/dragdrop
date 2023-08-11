@@ -20,7 +20,6 @@ defineProps({
 
 <style scoped lang="scss">
 .aside {
-	position: sticky;
 	flex: 0 0 250px;
 	@media (max-width: 840px) {
 		flex: 0 0 auto;

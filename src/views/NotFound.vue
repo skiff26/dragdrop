@@ -35,7 +35,7 @@
 		margin-bottom: 20px;
 		a {
 			transition: all 0.3s ease 0s;
-			color: #42b883;
+			color: var(--base-green);
 			&:hover {
 				color: #42d392;
 			}

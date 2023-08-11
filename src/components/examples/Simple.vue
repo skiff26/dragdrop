@@ -57,6 +57,7 @@ const onDrop = (event, index) => {
 .drag-el {
 	padding: 10px 15px;
 	border: 1px solid #363636;
+	background-color: #242424;
 	cursor: grab;
 	&:not(:last-child) {
 		margin-bottom: 10px;

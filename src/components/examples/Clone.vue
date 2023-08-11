@@ -44,8 +44,8 @@ const { firstList, secondList } = defineProps({
 })
 
 const startDrag = (event, item, list) => {
-	event.dataTransfer.dropEffect = 'move'
-	event.dataTransfer.effectAllowed = 'move'
+	event.dataTransfer.dropEffect = 'copy'
+	event.dataTransfer.effectAllowed = 'copy'
 	event.dataTransfer.setData('itemId', item.id)
 	if (list) event.dataTransfer.setData('itemList', list)
 }

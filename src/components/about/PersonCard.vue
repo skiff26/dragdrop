@@ -62,7 +62,7 @@ const props = defineProps({
 		line-height: 20px;
 		font-size: 14px;
 		font-weight: 500;
-		color: #ebebeb99;
+		color: var(--base-grey);
 		span {
 			color: var(--base-white);
 		}

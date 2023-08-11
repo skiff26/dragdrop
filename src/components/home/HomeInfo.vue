@@ -43,7 +43,7 @@ const articles = [
 	border-radius: 8px;
 	transition: all 0.3s ease 0s;
 	&:hover {
-		background: #42b883;
+		background: var(--base-green);
 		p {
 			color: var(--base-white);
 		}
