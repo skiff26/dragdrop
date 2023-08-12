@@ -4,7 +4,7 @@
 		<Simple :items="items" />
 		<CodePre :items="items" />
 		<PropsList :list="propsList" />
-		<ButtonsList link="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/Simple.vue"/>  
+		<ButtonsList link="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/Simple.vue"/> 
 	</section>
 </template>
 

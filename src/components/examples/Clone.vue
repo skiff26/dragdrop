@@ -26,7 +26,7 @@
 			@dragenter.prevent
 			>
 			{{ item.title }} id: {{ item.id }}
-		</div>
+			</div>
 		</div>
 	</div>
 </template>
