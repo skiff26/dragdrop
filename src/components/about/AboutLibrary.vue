@@ -1,6 +1,6 @@
 <template>
 	<section class="product">
-		<h2 class="product__title">What this library is?</h2>
+		<h2 class="product__title">What Is This Library?</h2>
 		<div class="product__text">
 			<p>This is a library with <strong>Ready-To-Use Drag-and-Drop</strong> components.</p>
 			<p>It is created to facilitate the integration of Drag-and-Drop elements into Vue.js applications.</p>

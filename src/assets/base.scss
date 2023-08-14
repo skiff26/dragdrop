@@ -1,8 +1,8 @@
 :root {
-	--base-white: #ffffffde;
-	--base-green: #42b883;
-	--base-green-hover: #33a06f;
-	--base-grey: #ebebeb99;
+  --base-white: #ffffffde;
+  --base-green: #42b883;
+  --base-green-hover: #33a06f;
+  --base-grey: #ebebeb99;
 
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -35,8 +35,6 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -95,11 +93,9 @@ body,html{
 ::-webkit-scrollbar {
 	width: 10px;
 }
-
 ::-webkit-scrollbar-track {
 	background: #1a1a1a;
 }
-
 ::-webkit-scrollbar-thumb {
 	background: #5a5858;
 	&:hover {

@@ -1,6 +1,6 @@
 <template>
 	<div class="info">
-		<ul><strong>Props:</strong> 
+		<ul><strong>{{ emit ? 'Emits:' : 'Props:' }}</strong> 
 			<li v-for="item in list" :key="item.name">
 				<p><strong>{{ item.name }}:</strong> {{ item.text }}</p>
 			</li>
@@ -13,6 +13,10 @@ defineProps({
 	list: {
 		type: Array,
 		required: true
+	},
+	emit: {
+		type: Boolean,
+		default: false
 	}
 })
 </script>

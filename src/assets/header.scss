@@ -14,8 +14,10 @@
 		align-items: center;
 		transition: all 0.3s ease 0s;
 		cursor: pointer;
-		&:hover {
-			opacity: 0.6;
+		@media (min-width: 600px) {
+			&:hover {
+				opacity: 0.6;
+			}
 		}
 		img {
 			height: 24px;
