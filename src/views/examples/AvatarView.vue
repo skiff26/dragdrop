@@ -16,20 +16,14 @@ import CodePre from '@/components/examples/CodePre.vue'
 import PropsList from '@/components/examples/PropsList.vue'
 import ButtonsList from '@/components/examples/ButtonsList.vue'
 
-const items = ref([
-	{
-		"name": "creator.jpg",
-		"size": 16835,
-		"type": "image/jpeg",
-		"date": new Date()
-	}
-])
+const items = ref([])
+
 const propsList = [
 	{ name: 'trash', text: 'Boolean - add trash for delete image. Default = true.' },
 ]
 
 const emitsList = [
-	{ name: 'uploadFile', text: 'Arguments: File.' },
+	{ name: 'uploadFile', text: 'Arguments: file.' },
 	{ name: 'delete', text: 'No arguments.' },
 ]
 
@@ -40,6 +34,6 @@ const uploadFile = (file) => {
 		type: file.type,
 		date: file.lastModifiedDate
 	}
-	items.value[0] = (copyFile)
+	items.value[0] = copyFile
 }
 </script>
