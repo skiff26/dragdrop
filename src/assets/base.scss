@@ -26,6 +26,8 @@
 }
 
 :root {
+  --color-scheme: light;
+
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
@@ -39,6 +41,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+  	--color-scheme: dark;
+
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
@@ -74,6 +78,7 @@ body,html{
 	font-weight: 400;
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #1a1a1a;
+	color-scheme: dark;
 }
 .wrapper {
 	overflow: hidden;
@@ -89,16 +94,3 @@ body,html{
 	margin: 0 auto;
 	padding: 0 15px;
 }
-
-::-webkit-scrollbar {
-	width: 10px;
-}
-::-webkit-scrollbar-track {
-	background: #1a1a1a;
-}
-::-webkit-scrollbar-thumb {
-	background: #5a5858;
-	&:hover {
-		background: #747070;
-	}
- }
