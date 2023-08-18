@@ -26,16 +26,23 @@ defineProps({
 		padding-right: 30px;
 	}
 	@media (max-width: 768px) {
-		margin-bottom: 20px;
 		display: flex;
 		justify-content: space-between;
-		column-gap: 25px;
 		flex-wrap: wrap;
+		column-gap: 10px;
 		padding-right: 0;
+		margin-bottom: 20px;
 	}
 	&__group {
-		&:not(:last-child) {
-			margin-bottom: 20px;
+		@media (max-width: 312px) {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		@media (min-width: 769px) {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
 		}
 	}
 	&__group-title {

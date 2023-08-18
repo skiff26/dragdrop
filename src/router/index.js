@@ -65,14 +65,42 @@ const router = createRouter({
       path: '/docs',
       name: 'docs',
       component: () => import('../views/DocsView.vue'),
-		meta: { title: 'Docs' }
+		meta: { title: 'Docs' },
+		redirect: () => { return { name: 'introduction' } },
+		children: [
+			{
+				path: 'introduction',
+				name: 'introduction',
+				component: () => import('../views/docs/IntroductionView.vue'),
+			},
+			{
+				path: 'start',
+				name: 'start',
+				component: () => import('../views/docs/StartView.vue'),
+			},
+			{
+				path: 'tutorial',
+				name: 'tutorial',
+				component: () => import('../views/docs/TutorialView.vue'),
+			},
+			{
+				path: 'props-and-emits',
+				name: 'PropsAndEmits',
+				component: () => import('../views/docs/PropsAndEmitsView.vue'),
+			},
+			{
+				path: 'support',
+				name: 'support',
+				component: () => import('../views/docs/SupportView.vue'),
+			}
+		]
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'notFound',
       component: () => import('../views/NotFound.vue'),
 		meta: { title: '404' }
-    },
+    }
   ]
 })
 
