@@ -1,0 +1,1 @@
+import{S as e}from"./StubSection-c09414b0.js";import{o as t,c as a,e as o,b as s}from"./index-b75845a9.js";const c={class:"main__example example"},_=s("h1",{class:"example__title"},"Tutorial",-1),p={__name:"TutorialView",setup(r){return(i,l)=>(t(),a("section",c,[_,o(e)]))}};export{p as default};
