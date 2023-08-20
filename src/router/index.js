@@ -9,7 +9,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-		meta: { title: 'Drag & Drop' }
+		meta: { title: 'Drag and Drop' }
     },
 	 {
       path: '/about',
@@ -105,11 +105,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-	if (to.query.title) {
-		document.title = `${ to.query.title }`
-	} else {
-		document.title = to.meta.title === 'Drag & Drop' ? `Vue.js - Ready to Use ${to.meta.title} components` : `${to.meta.title} | Vue.js - Drag & Drop`;
-	}
+	document.title = to.meta.title === 'Drag and Drop' ? `Vue.js - Ready to use ${to.meta.title} components` : `${to.meta.title} | Vue.js - Drag and Drop`
 	next()
 })
 
