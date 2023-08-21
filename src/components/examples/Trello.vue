@@ -3,7 +3,7 @@
 		<div class="drop-zone" @drop="onDrop($event, 1)" @dragenter.prevent @dragover.prevent>
 			<h3>In progress</h3>
 			<div class="drag-el" 
-			v-for="(item, index) in getList(1)" :key="item.id"
+			v-for="(item) in getList(1)" :key="item.id"
 			draggable="true"
 			@dragstart="startDrag($event, item)"
 			@drop="onDropSort($event, item)"
@@ -17,7 +17,7 @@
 		<div class="drop-zone" @drop="onDrop($event, 2)" @dragenter.prevent @dragover.prevent>
 			<h3>Done</h3>
 			<div class="drag-el" 
-			v-for="(item, index) in getList(2)" :key="item.id"
+			v-for="(item) in getList(2)" :key="item.id"
 			draggable="true"
 			@dragstart="startDrag($event, item)"
 			@drop="onDropSort($event, item)"
