@@ -30,7 +30,7 @@ test('renders icon with default size', () => {
 
 	renderIcon('menu')
 	
-	const icon = screen.getByTestId('base-icon');
+	const icon = screen.getByTestId('base-icon')
 
 	expect(icon.getAttribute('width')).toBe(defaultSize)
 	expect(icon.getAttribute('height')).toBe(defaultSize)
@@ -41,7 +41,7 @@ test('renders icon with custom size', () => {
 
 	renderIcon('menu', size)
 	
-	const icon = screen.getByTestId('base-icon');
+	const icon = screen.getByTestId('base-icon')
 
 	expect(icon.getAttribute('width')).toBe(size)
 	expect(icon.getAttribute('height')).toBe(size)
