@@ -28,36 +28,43 @@ const router = createRouter({
 				path: 'simple',
 				name: 'simple',
 				component: () => import('../views/examples/SimpleView.vue'),
+				meta: { title: 'Example - Simple' }
 			},
 			{
 				path: 'trello',
 				name: 'trello',
 				component: () => import('../views/examples/TrelloView.vue'),
+				meta: { title: 'Example - Trello' }
 			},
 			{
 				path: 'clone',
 				name: 'clone',
 				component: () => import('../views/examples/CloneView.vue'),
+				meta: { title: 'Example - Clone' }
 			},
 			{
 				path: 'controlclone',
 				name: 'controlclone',
 				component: () => import('../views/examples/ControlCloneView.vue'),
+				meta: { title: 'Example - Clone on control' }
 			},
 			{
 				path: 'trash',
 				name: 'trash',
 				component: () => import('../views/examples/TrashView.vue'),
+				meta: { title: 'Example - Trash' }
 			},
 			{
 				path: 'avatar',
 				name: 'avatar',
 				component: () => import('../views/examples/AvatarView.vue'),
+				meta: { title: 'Example - Avatar' }
 			},
 			{
 				path: 'upload',
 				name: 'upload',
 				component: () => import('../views/examples/UploadView.vue'),
+				meta: { title: 'Example - File Upload' }
 			}
 		]
     },
@@ -72,26 +79,31 @@ const router = createRouter({
 				path: 'introduction',
 				name: 'introduction',
 				component: () => import('../views/docs/IntroductionView.vue'),
+				meta: { title: 'Introduction' }
 			},
 			{
 				path: 'start',
 				name: 'start',
 				component: () => import('../views/docs/StartView.vue'),
+				meta: { title: 'Quick Start' }
 			},
 			{
 				path: 'tutorial',
 				name: 'tutorial',
 				component: () => import('../views/docs/TutorialView.vue'),
+				meta: { title: 'Tutorial' }
 			},
 			{
 				path: 'props-and-emits',
 				name: 'PropsAndEmits',
 				component: () => import('../views/docs/PropsAndEmitsView.vue'),
+				meta: { title: 'Props and Emits' }
 			},
 			{
 				path: 'support',
 				name: 'support',
 				component: () => import('../views/docs/SupportView.vue'),
+				meta: { title: 'Support' }
 			}
 		]
     },
