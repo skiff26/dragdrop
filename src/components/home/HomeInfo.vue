@@ -1,6 +1,6 @@
 <template>
 	<section class="main__info info">
-		<article class="article" v-for="article in articles" :key="article.title">
+		<article class="info__article" v-for="article in articles" :key="article.title">
 			<h2>{{ article.title }}</h2>
 			<p>{{ article.text }}</p>
 		</article>
@@ -36,7 +36,7 @@ const articles = [
 		padding: 25px 0;
 	}
 }
-.article {
+.info__article {
 	max-width: 260px;
 	background: #242424;
 	padding: 18px;

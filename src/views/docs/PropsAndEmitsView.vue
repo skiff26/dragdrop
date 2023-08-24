@@ -1,6 +1,6 @@
 <template>
-	<section class="main__example example">
-		<h1 class="example__title">Props and Emits</h1>
+	<section class="main__article article">
+		<h1 class="article__title">Props and Emits</h1>
 		<StubSection />
 	</section>
 </template>

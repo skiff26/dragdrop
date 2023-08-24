@@ -45,7 +45,7 @@ const groups = [
 	}
 }
 
-.example {
+.article {
 	flex: 1 1 calc(100% - 250px);
 	padding: 30px;
 	border: 1px solid #363636;
