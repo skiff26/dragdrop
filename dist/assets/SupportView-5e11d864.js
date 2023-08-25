@@ -1,1 +1,0 @@
-import{S as e}from"./StubSection-c09414b0.js";import{o as t,c as o,e as a,b as s}from"./index-b75845a9.js";const c={class:"main__example example"},_=s("h1",{class:"example__title"},"Support",-1),l={__name:"SupportView",setup(r){return(p,n)=>(t(),o("section",c,[_,a(e)]))}};export{l as default};
