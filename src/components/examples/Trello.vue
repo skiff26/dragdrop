@@ -43,7 +43,7 @@ const { items, sort } = defineProps({
 	}
 })
 
-const getList = (list) => items.filter((item) => item.list == list)
+const getList = (list) => items ? items.filter((item) => item.list == list) : []
 
 const getItemById = (event) => {
 	const itemId = event.dataTransfer.getData('itemId')
