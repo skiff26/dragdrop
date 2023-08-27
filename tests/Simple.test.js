@@ -41,15 +41,8 @@ describe('moving', () => {
 	it('Item A on Item C', async () => {
 		renderList()
 	
-		await fireEvent.dragStart(screen.getByText('Item A'), {
-			dataTransfer: {
-				dropEfect: 'move',
-				setData: (item) => item
-			}
-		})
-	
 		await fireEvent.drop(screen.getByText('Item C'), {
-			dataTransfer: { getData: (item) => '0' }
+			dataTransfer: { getData: () => '0' }
 		})
 	
 		const itemsFromDom = await screen.findAllByText((content, element) => content.startsWith('Item') && element.className.includes('drag-el'))

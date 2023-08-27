@@ -37,17 +37,10 @@ describe('moving', () => {
 	it('Item A to list 2', async () => {
 		renderItems()
 
-		await fireEvent.dragStart(screen.getByText('Item A'), {
-			dataTransfer: {
-				dropEfect: 'move',
-				setData: (item) => item
-			}
-		})
-
 		const dropZone = screen.getByText('Done').closest('.drop-zone')
 
 		await fireEvent.drop(dropZone, {
-			dataTransfer: { getData: (item) => '0' }
+			dataTransfer: { getData: () => '0' }
 		})
 
 		expect(dropZone.contains(screen.getByText('Item A'))).toBeTruthy()
@@ -57,15 +50,8 @@ describe('moving', () => {
 		const sort = true
 		renderItems(sort)
 	
-		await fireEvent.dragStart(screen.getByText('Item B'), {
-			dataTransfer: {
-				dropEfect: 'move',
-				setData: (item) => item
-			}
-		})
-	
 		await fireEvent.drop(screen.getByText('Item C'), {
-			dataTransfer: { getData: (item) => '1' }
+			dataTransfer: { getData: () => '1' }
 		})
 	
 		const itemsFromDom = await screen.findAllByText((content, element) => content.startsWith('Item') && element.className.includes('drag-el'))
