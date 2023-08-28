@@ -55,5 +55,15 @@
 				margin-bottom: 10px;
 			}
 		}
+		a {
+			color: var(--base-green);
+			transition: color 0.3s ease 0s;
+			&:hover {
+				color: var(--base-green-hover)
+			}
+		}
+	}
+	li.small {
+		margin-bottom: 10px;
 	}
 }
