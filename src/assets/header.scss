@@ -60,11 +60,12 @@
 			transition: all 0.3s ease 0s;
 			font-weight: 500;
 			line-height: 1.5;
+			height: calc(100% - 1px);
+			border-bottom: 1px solid #363636;
 			@media (max-width: 650px) {
 				padding: 0 10px;
 			}
 			&.nav-item-active {
-				height: calc(100% - 1px);
 				border-bottom: 1px solid var(--base-green);
 			}
 			&:hover {
@@ -146,6 +147,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 30px;
+		margin-bottom: 20px;
 	}
 
 	&__media-item {

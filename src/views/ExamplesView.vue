@@ -40,7 +40,8 @@ const groups = [
 .main__content {
 	margin: 30px auto;
 	display: flex;
-	min-height: calc(100vh - 55px - 88px - 60px);
+	min-height: calc(955px - 55px - 88px - 60px);
+	max-height: max-content;
 	@media (max-width: 768px) {
 		display: block;
 		margin: 25px auto;
