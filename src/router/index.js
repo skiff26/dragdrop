@@ -100,6 +100,12 @@ const router = createRouter({
 				meta: { title: 'Props and Emits' }
 			},
 			{
+				path: 'faq',
+				name: 'FAQ',
+				component: () => import('../views/docs/FAQView.vue'),
+				meta: { title: 'FAQ' }
+			},
+			{
 				path: 'support',
 				name: 'support',
 				component: () => import('../views/docs/SupportView.vue'),
@@ -117,7 +123,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-	document.title = to.meta.title === 'Drag and Drop' ? `Vue.js - Ready to use ${to.meta.title} components` : `${to.meta.title} | Vue.js - Drag and Drop`
+	window.scrollTo(0, 0)
+	document.title = to.meta.title === 'Drag and Drop' ? `Vue.js - Ready to Use ${to.meta.title} Components | Vue 3` : `${to.meta.title} | Vue.js - Drag and Drop`
 	next()
 })
 
