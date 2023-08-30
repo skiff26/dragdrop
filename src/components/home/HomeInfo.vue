@@ -15,7 +15,7 @@ const articles = [
 	},
 	{
 		title: "User-friendly experience",
-		text: "Add dragging functionality to your Vue.js project with just a few lines of code. Our Drag and Drop feature is straightforward and intuitive."
+		text: "Add dragging functionality to your Vue.js project with just a few lines of code. Our Drag and Drop feature is straightforward and intuitive. Our components are built using Vue 3 with the Composition API."
 	},
 	{
 		title: "No extra installations",

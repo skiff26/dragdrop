@@ -29,6 +29,7 @@ const groups = [
 		title: 'Other',
 		links: [
 			{ name: 'Support', link: 'support' },
+			{ name: 'FAQ', link: 'FAQ' },
 		]
 	}, 
 ]

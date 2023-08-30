@@ -14,6 +14,6 @@
 		<h2>Start Dragging and Dropping!</h2>
 		<p>With Vue.js Ready-to-Use Drag and Drop Components, enhancing your project's user interface has never been easier. Enjoy the seamless integration and flexibility our components offer. For more details and component options, check out our documentation.</p>
 		<br>
-		<p>Happy coding!</p>
+		<p>Happy coding! 🙂</p>
 	</section>
 </template>
