@@ -1,5 +1,10 @@
 .header {
-	height: 55px;
+	position: fixed;
+	top: 0px;
+	z-index: 50;
+	width: 100%;
+	background-color: var(--vt-c-black);
+	height: var(--vt-nav-height);
 	border-bottom: 1px solid #363636;
 	border-top: 1px solid #363636;
 	&__container {
@@ -105,11 +110,11 @@
 .nav-popup {
 	position: absolute;
 	width: 100vw;
-	height: 100%;
+	height: 100vh;
 	top: 0;
 	left: 0;
 	z-index: 5;
-	background-color: #1a1a1a;
+	background-color: var(--vt-c-black);
 	overflow: auto;
 	&__header {
 		height: 55px;
