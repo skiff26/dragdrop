@@ -1,0 +1,1 @@
+import{S as e}from"./StubSection-5e352135.js";import{o as t,c as s,e as a,b as c}from"./index-cdf3d270.js";const o={class:"main__article article"},r=c("h1",{class:"article__title"},"Props and Emits",-1),p={__name:"FAQView",setup(_){return(i,n)=>(t(),s("section",o,[r,a(e)]))}};export{p as default};
