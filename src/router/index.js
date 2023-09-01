@@ -124,7 +124,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
 	window.scrollTo(0, 0)
-	document.title = to.meta.title === 'Drag and Drop' ? `Vue.js - Ready to Use ${to.meta.title} Components | Vue 3` : `${to.meta.title} | Vue.js - Drag and Drop`
+	document.title = to.meta.title === 'Drag and Drop' ? `Vue.js - Ready to Use ${to.meta.title} Components` : `${to.meta.title} | Vue.js - Drag and Drop`
 	next()
 })
 
