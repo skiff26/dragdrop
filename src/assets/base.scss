@@ -89,8 +89,10 @@ body,html{
 	min-height: 100vh;
 }
 .main{
-	padding-top: var(--vt-nav-height);
 	flex: 1 1 auto;
+	@media (min-width: 650px) {
+		padding-top: var(--vt-nav-height);
+	}
 }
 [class*="__container"]{
 	max-width: 1200px;
