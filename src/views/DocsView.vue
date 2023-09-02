@@ -1,7 +1,7 @@
 <template>
 	<div class="main__container">
+		<Sidebar :groups="groups" /> 
 		<div class="main__content">
-			<Sidebar :groups="groups" />
 			<RouterView />
 		</div>
 	</div>
@@ -36,22 +36,30 @@ const groups = [
 </script>
 
 <style lang="scss" scoped>
-.main__content {
+.main__container {
 	margin: 30px auto;
+	@media (max-width: 768px) {
+		margin: 25px auto;
+	}
+}
+.main__content {
 	display: flex;
+	justify-content: end;
 	min-height: calc(955px - 55px - 88px - 60px);
 	max-height: max-content;
 	@media (max-width: 768px) {
 		display: block;
-		margin: 25px auto;
 	}
 }
 
 .article {
-	flex: 1 1 calc(100% - 250px);
+	flex: 0 1 calc(100% - 250px);
 	padding: 30px;
 	border: 1px solid #363636;
 	border-radius: 8px;
+	@media (max-width: 840px) {
+		flex: 0 1 calc(100% - 150px);
+	}
 	@media (max-width: 768px) {
 		padding: 15px;
 	}

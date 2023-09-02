@@ -1,6 +1,6 @@
 {
   "name": "drag-drop",
-  "version": "0.7.2",
+  "version": "0.7.6",
   "private": true,
   "scripts": {
     "dev": "vite",

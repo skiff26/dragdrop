@@ -20,12 +20,15 @@ defineProps({
 
 <style scoped lang="scss">
 .aside {
-	flex: 0 0 250px;
+	position: fixed;
+	top: 85px;
+	width: 250px;
 	@media (max-width: 840px) {
-		flex: 0 0 auto;
-		padding-right: 30px;
+		width: max-content;
 	}
 	@media (max-width: 768px) {
+		position: static;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;

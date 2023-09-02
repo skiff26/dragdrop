@@ -18,6 +18,9 @@ import AboutTeam from '@/components/about/AboutTeam.vue';
 		font-weight: 900;
 		letter-spacing: 5px;
 		text-align: center;
+		@media (max-width: 453px) {
+			margin-top: 25px;
+		}
 	}
 }
 </style>
