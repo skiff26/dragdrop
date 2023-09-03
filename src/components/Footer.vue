@@ -10,8 +10,8 @@
 <style scoped lang="scss">
 .footer {
 	color: #979494;
-	border-bottom: 1px solid #363636;
-	border-top: 1px solid #363636;
+	border-bottom: 1px solid var(--c-border);
+	border-top: 1px solid var(--c-border);
 	padding: 25px;
 	text-align: center;
 	max-height: 88px;
@@ -21,7 +21,7 @@
 	}
 	a {
 		transition: all 0.3s ease 0s;
-		color: white;
+		color: var(--c-f-link);
 		font-weight: 500;
 		line-height: 1;
 		letter-spacing: 0.2;

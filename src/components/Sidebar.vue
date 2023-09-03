@@ -49,7 +49,7 @@ defineProps({
 		}
 	}
 	&__group-title {
-		color: var(--base-white);
+		color: var(--c-text);
 		line-height: 20px;
 		margin-bottom: 10px;
 		font-weight: 500;
@@ -73,7 +73,7 @@ defineProps({
 			@media (min-width: 425px) {
 				&:not(.active) {
 					&:hover {
-						color: var(--base-white);
+						color: var(--c-text);
 					}
 				}
 			}

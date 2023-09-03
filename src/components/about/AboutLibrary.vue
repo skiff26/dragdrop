@@ -21,7 +21,7 @@
 .product {
 	padding: 40px;
 	max-width: 1000px;
-	background: #242424;
+	background: var(--c-bg-card);
 	border-radius: 8px;
 	margin: 30px auto;
 	@media (max-width: 768px) {
@@ -31,7 +31,7 @@
 		padding: 30px 20px;
 	}
 	&__title {
-		color: var(--base-white);
+		color: var(--c-text);
 		font-size: 30px;
 		text-align: center;
 		margin-bottom: 20px;
@@ -42,7 +42,7 @@
 		color: var(--base-grey);
 		line-height: 1.4;
 		strong {
-			color: rgba(255, 255, 255, 0.767);
+			color: var(--c-text);
 		}
 		h3 {
 			margin-bottom: 10px;

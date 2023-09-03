@@ -30,7 +30,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .card {
-	background: #242424;
+	background: var(--c-bg-card);
 	border-radius: 8px;
 	max-width: 570px;
 	margin: 0 auto;
@@ -54,7 +54,7 @@ const props = defineProps({
 	&__name {
 		font-size: 20px;
 		font-weight: 500;
-		color: var(--base-white);
+		color: var(--c-text);
 	}
 
 	&__org {
@@ -64,7 +64,7 @@ const props = defineProps({
 		font-weight: 500;
 		color: var(--base-grey);
 		span {
-			color: var(--base-white);
+			color: var(--c-text);
 		}
 	}
 
@@ -79,7 +79,7 @@ const props = defineProps({
 				margin-bottom: 10px;
 			}
 			address {
-				color: var(--base-white);
+				color: var(--c-text);
 				font-style: normal;
 			}
 			a {
@@ -99,7 +99,7 @@ const props = defineProps({
 		svg {
 			transition: fill 0.3s ease 0s;
 			&:hover {
-				fill: white;
+				fill: var(--media-fill);
 			}
 		}
 	}

@@ -12,6 +12,7 @@
 					</li>
 				</ul>
 				<span class="nav__line"></span>
+				<!-- <AppearanceSwitcher /> -->
 				<ul class="nav__media">
 					<li class="nav__media-item" v-for="item in mediaElements" :key="item.name">
 						<a :href="item.link" target="_blank"><BaseIcon :name="item.name"/></a>
@@ -47,7 +48,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import BaseIcon from './BaseIcon.vue';
+import BaseIcon from './BaseIcon.vue'
+import AppearanceSwitcher from './AppearanceSwitcher.vue'
 const isMobileNavOpen = ref(false)
 const toggleMobileNav = () => {
 	isMobileNavOpen.value = !isMobileNavOpen.value

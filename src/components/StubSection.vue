@@ -16,8 +16,8 @@ defineProps({
 <style scoped lang="scss">
 .stub {
 	padding: 30px;
-	color: #e3e3e3;
-	background: #242424;
+	color: var(--c-text);
+	background-color: var(--c-bg-card);
 	border-radius: 8px;
 	&.withMargin {
 		margin: 30px auto;

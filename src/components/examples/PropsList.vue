@@ -46,7 +46,7 @@ defineProps({
 					display: inline-block;
 					margin-right: 5px;
 					border-radius: 8px;
-					background: #242424;
+					background: var(--c-bg-card);
 					padding: 8px;
 					color: var(--base-grey);
 					@media (max-width: 600px) {

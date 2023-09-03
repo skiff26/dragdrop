@@ -57,7 +57,7 @@ const groups = [
 .example {
 	flex: 0 1 calc(100% - 250px);
 	padding: 30px;
-	border: 1px solid #363636;
+	border: 1px solid var(--c-border);
 	border-radius: 8px;
 	@media (max-width: 840px) {
 		flex: 0 1 calc(100% - 150px);

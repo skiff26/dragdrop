@@ -68,6 +68,7 @@ const deleteFile = () => {
 	justify-content: space-between;
 	margin: 30px auto;
 	background-color: #242424;
+	color: #ffffffde;
 	gap: 30px;
 	border-radius: 8px;
 	@media (max-width: 768px) {

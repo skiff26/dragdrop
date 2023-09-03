@@ -46,7 +46,7 @@
 	}
 }
 .not-found {
-	background: #242424;
+	background: var(--c-bg-card);
 	padding: 30px;
 	border-radius: 8px;
 	margin: 30px;

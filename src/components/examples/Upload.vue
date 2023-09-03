@@ -107,6 +107,7 @@ const deleteFile = (file) => {
 	flex-direction: column;
 	margin: 30px auto;
 	background-color: #242424;
+	color: #ffffffde;
 	border-radius: 8px;
 	@media (max-width: 768px) {
 		padding: 15px;

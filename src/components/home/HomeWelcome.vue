@@ -3,7 +3,7 @@
 		<h1 class="section__title">Drag And Drop<br>Components for Vue.js</h1>
 		<p class="section__description">Improve Your Web App with Seamless Drag and Drop Integration!</p>
 		<div class="section__buttons">
-			<router-link :to="{ name: 'introduction' }"><span>Get Started</span> <BaseIcon name="rightArrowShort" color="#aac8e4" wh="20"/></router-link>
+			<router-link :to="{ name: 'introduction' }"><span>Get Started</span> <BaseIcon name="rightArrowShort" color="currentColor" wh="20"/></router-link>
 		</div>
 	</section>
 </template>
@@ -68,11 +68,11 @@ import BaseIcon from '@/components/BaseIcon.vue';
 		display: flex;
 		justify-content: center;
 		a {
-			color: #aac8e4;
+			color: var(--c-btn);
 			font-size: 16px;
 			font-weight: 500;
 			padding: 12px 38px 12px 22px;
-			background-color: #2f2f2f;
+			background-color: var(--c-bg-btn);
 			border-radius: 8px;
 			transition: all 0.3s ease 0s;
 			position: relative;
@@ -83,7 +83,7 @@ import BaseIcon from '@/components/BaseIcon.vue';
 				transition: all 0.2s ease 0s;
 			}
 			&:hover {
-				background: #3a3a3a;
+				background-color: var(--c-bg-btn-hover);
 				svg {
 					right: 12px;
 				}

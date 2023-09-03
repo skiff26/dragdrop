@@ -14,7 +14,7 @@ import AboutTeam from '@/components/about/AboutTeam.vue';
 	&__title {
 		margin-top: 40px;
 		font-size: 40px;
-		color: var(--base-white);
+		color: var(--c-text);
 		font-weight: 900;
 		letter-spacing: 5px;
 		text-align: center;

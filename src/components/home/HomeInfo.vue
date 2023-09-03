@@ -38,7 +38,7 @@ const articles = [
 }
 .info__article {
 	max-width: 260px;
-	background: #242424;
+	background: var(--c-bg-card);
 	padding: 18px;
 	border-radius: 8px;
 	transition: all 0.3s ease 0s;
@@ -49,13 +49,13 @@ const articles = [
 		}
 	}
 	h2 {
-		color: var(--base-white);
+		color: var(--c-header-card);
 		font-size: 20px;
 		font-weight: 600;
 		margin-bottom: 15px;
 	}
 	p {
-		color: #979797;
+		color: var(--c-text-card);
 		line-height: 1.5;
 	}
 }

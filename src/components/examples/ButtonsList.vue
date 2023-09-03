@@ -21,7 +21,7 @@ defineProps({
 	align-items: center;
 	justify-content: center;
 	padding-top: 20px;
-	border-top: 1px solid #363636;
+	border-top: 1px solid var(--c-border);
 	@media (max-width: 768px) {
 		padding-top: 15px;
 	}

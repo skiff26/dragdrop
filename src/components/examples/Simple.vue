@@ -48,6 +48,7 @@ const onDrop = (event, index) => {
 	margin: 0 auto;
 	gap: 20px;
 	background-color: #242424;
+	color: #ffffffde;
 	padding: 30px;
 	border-radius: 8px;
 	@media (max-width: 768px) {
