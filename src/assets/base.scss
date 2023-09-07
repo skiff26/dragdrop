@@ -19,6 +19,7 @@
   --c-bg: var(--vt-c-white);
   --c-text: var(--base-dark);
   --c-border: #3c3c3c1f;
+  --c-border-hover: #8e8e8e;
 
   --c-bg-card: #f9f9f9;
   --c-header-card: var(--base-dark);
@@ -29,33 +30,37 @@
   --c-bg-btn: #f1f1f1;
   --c-bg-btn-hover: #e5e5e5;
 
+  --c-border-switch: #3c3c3c4a;
+ --c-bg-btn-code-hover: #ebebeb;
+
   --c-f-link: var(--base-grey);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  	 --color-scheme: dark;
-	 --base-grey: rgba(235, 235, 235, 0.6);
-	 --media-fill: white;
+html.dark {
+  --color-scheme: dark;
+  --base-grey: rgba(235, 235, 235, 0.6);
+  --media-fill: white;
 
-	 --c-bg: var(--vt-c-black);
-	 --c-text: var(--base-white);
-    --c-border: #363636;
+  --c-bg: var(--vt-c-black);
+  --c-text: var(--base-white);
+  --c-border: #363636;
 
-	 --c-bg-card: #242424;
-	 --c-header-card: var(--base-white);
-	 --c-text-card: #979797;
+  --c-bg-card: #242424;
+  --c-header-card: var(--base-white);
+  --c-text-card: #979797;
 
+ 
+  --c-btn: #aac8e4;
+ --c-bg-btn: #2f2f2f;
+  --c-bg-btn-hover: #3a3a3a;
 
-	 --c-btn: #aac8e4;
-	 --c-bg-btn: #2f2f2f;
-	 --c-bg-btn-hover: #3a3a3a;
-
-	 --c-f-link: white;
-  }
+ --c-border-switch: #545454a6;
+  --c-bg-btn-code-hover: #3a3a3a;
+ 
+  --c-f-link: white;
 }
 
-/*Обнуление*/
+/*null*/
 *{padding:0;margin:0;border:0;}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
 :focus,:active{outline:none;}
@@ -79,6 +84,9 @@ body,html{
 	color: var(--c-text);
 	background-color: var(--c-bg);
 	color-scheme: var(--color-scheme);
+}
+body {
+	transition: background-color 0.3s ease;
 }
 .wrapper {
 	overflow: hidden;

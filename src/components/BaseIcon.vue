@@ -8,7 +8,7 @@
 	</svg>
 </template>
 <script>
-import icons from '../icons';
+import icons from '../icons'
 export default {
 	props: ['name', 'wh', 'color'],
 	data () {

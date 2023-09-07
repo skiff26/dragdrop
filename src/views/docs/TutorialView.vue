@@ -6,5 +6,5 @@
 </template>
 
 <script setup>
-import StubSection from '@/components/StubSection.vue';
+import StubSection from '@/components/StubSection.vue'
 </script>

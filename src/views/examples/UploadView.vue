@@ -17,10 +17,10 @@ import PropsList from '@/components/examples/PropsList.vue'
 import ButtonsList from '@/components/examples/ButtonsList.vue'
 
 const propsList = [
-	{ name: 'collection', text: 'Number | Defaul = 1, number of files.' },
-	{ name: 'maxSize', text: 'Number | Defaul = 5MB, maximum file size.' },
-	{ name: 'image', text: 'Boolend | Defaul = false, files must be in jpeg or png format.' },
-	{ name: 'pdf', text: 'Number | Defaul = false, file must be in pdf format.' },
+	{ name: 'collection', text: 'Number | Default = 1, number of files.' },
+	{ name: 'maxSize', text: 'Number | Default = 5MB, maximum file size.' },
+	{ name: 'image', text: 'Boolend | Default = false, files must be in jpeg or png format.' },
+	{ name: 'pdf', text: 'Boolend | Default = false, file must be in pdf format.' },
 ]
 
 const emitsList = [

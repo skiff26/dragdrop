@@ -23,6 +23,7 @@ defineProps({
 	padding: 30px;
 	margin: 30px auto;
 	background-color: var(--c-bg-card);
+	transition: background-color 0.3s ease;
 	border-radius: 8px;
 	display: flex;
 	justify-content: space-between;

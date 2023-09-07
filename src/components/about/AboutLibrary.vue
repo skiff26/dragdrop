@@ -21,7 +21,8 @@
 .product {
 	padding: 40px;
 	max-width: 1000px;
-	background: var(--c-bg-card);
+	background-color: var(--c-bg-card);
+	transition: background-color 0.3s ease;
 	border-radius: 8px;
 	margin: 30px auto;
 	@media (max-width: 768px) {

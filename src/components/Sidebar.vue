@@ -23,6 +23,11 @@ defineProps({
 	position: fixed;
 	top: 85px;
 	width: 250px;
+	height: 100%;
+	overflow-y: auto;
+	@media (max-height: 600px) and (min-width: 768px) {
+		padding-bottom: 120px;
+	}
 	@media (max-width: 840px) {
 		width: max-content;
 	}

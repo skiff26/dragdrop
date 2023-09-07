@@ -12,7 +12,9 @@
 					</li>
 				</ul>
 				<span class="nav__line"></span>
-				<!-- <AppearanceSwitcher /> -->
+				<div class="nav__dark-mode-switcher">
+					<AppearanceSwitcher />
+				</div>
 				<ul class="nav__media">
 					<li class="nav__media-item" v-for="item in mediaElements" :key="item.name">
 						<a :href="item.link" target="_blank"><BaseIcon :name="item.name"/></a>
@@ -34,9 +36,13 @@
 								<router-link :to="{ name: item.link }">{{ item.name }}</router-link>
 							</li>
 						</ul>
+						<div class="nav-popup__appearence">
+							<p>Appearance</p>
+							<AppearanceSwitcher />
+						</div>
 						<ul class="nav-popup__media">
 							<li class="nav-popup__media-item" v-for="item in mediaElements" :key="item.name">
-								<a :href="item.link" target="_blank"><BaseIcon :name="item.name" wh="30"/></a>
+								<a :href="item.link" target="_blank"><BaseIcon :name="item.name" wh="28"/></a>
 							</li>
 						</ul>
 					</div>
@@ -72,7 +78,7 @@ const navitationElements = [
 const mediaElements = [
 	{
 		name: 'github',
-		link: 'https://github.com/skiff26'
+		link: 'https://github.com/skiff26/dragdrop'
 	},
 	{
 		name: 'telegram',

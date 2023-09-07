@@ -3,6 +3,7 @@
 	height: var(--vt-nav-height);
 	border-bottom: 1px solid var(--c-border);
 	border-top: 1px solid var(--c-border);
+	transition: background-color 0.3s ease;
 	@media (min-width: 650px) {
 		position: fixed;
 		top: 0px;
@@ -38,7 +39,7 @@
 
 	&__menu {
 		display: none;
-		@media (max-width: 550px) {
+		@media (max-width: 600px) {
 			display: block;
 		}
 	}
@@ -48,7 +49,7 @@
 	display: flex;
 	align-items: center;
 	height: 100%;
-	@media (max-width: 550px) {
+	@media (max-width: 600px) {
 		display: none;
 	}
 	&__list {
@@ -69,7 +70,7 @@
 			line-height: 1.5;
 			height: calc(100% - 1px);
 			border-bottom: 1px var(--c-border);
-			@media (max-width: 650px) {
+			@media (max-width: 700px) {
 				padding: 0 10px;
 			}
 			&.nav-item-active {
@@ -85,22 +86,27 @@
 		height: 24px;
 		width: 1px;
 		background: var(--c-border);
-		margin: 0 40px;
-		@media (max-width: 650px) {
+		margin: 0 30px;
+		@media (max-width: 700px) {
 			margin: 0 20px;
 		}
 	}
 
 	&__media {
-		margin-left: 15px;
+		margin-left: 20px;
 		display: flex;
 		gap: 20px;
-		@media (max-width: 650px) {
+		@media (max-width: 700px) {
 			gap: 10px;
 		}
 	}
 
 	&__media-item {
+		a {
+			display: flex;
+			align-items: center;
+			height: 30px;
+		}
 		a svg {
 			transition: all 0.3s ease 0s;
 			&:hover {
@@ -119,6 +125,7 @@
 	z-index: 5;
 	background-color: var(--c-bg);
 	overflow: auto;
+	transition: background-color 0.3s ease, color 0.3s ease;
 	&__header {
 		height: 55px;
 		display: flex;
@@ -132,13 +139,16 @@
 		}
 	}
 
+	&__body {
+		padding: 20px 15px;
+	}
+
 	&__list {
-		margin: 20px 0 30px;
+		max-width: 290px;
+		margin: 0 auto;
 	}
 
 	&__list-item {
-		width: calc(100% - 30px);
-		margin: 0 auto;
 		border-bottom: 1px solid var(--c-border);
 		a {
 			display: inline-block;
@@ -152,12 +162,23 @@
 		}
 	}
 
+	&__appearence {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 8px;
+		max-width: 290px;
+		margin: 20px auto;
+		padding: 12px 15px;
+		background-color: var(--c-bg-card);
+		transition: background-color 0.3s ease;
+	}
+
 	&__media {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 30px;
-		margin-bottom: 20px;
 	}
 
 	&__media-item {

@@ -30,7 +30,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .card {
-	background: var(--c-bg-card);
+	background-color: var(--c-bg-card);
 	border-radius: 8px;
 	max-width: 570px;
 	margin: 0 auto;
@@ -38,6 +38,7 @@ const props = defineProps({
 	gap: 30px;
 	padding: 30px;
 	margin-bottom: 20px;
+	transition: background-color 0.3s ease;
 	@media (max-width: 450px) {
 		flex-wrap: wrap;
 		gap: 20px;

@@ -6,8 +6,8 @@
 	</div>
 </template>
 <script setup>
-import AboutLibrary from '@/components/about/AboutLibrary.vue';
-import AboutTeam from '@/components/about/AboutTeam.vue';
+import AboutLibrary from '@/components/about/AboutLibrary.vue'
+import AboutTeam from '@/components/about/AboutTeam.vue'
 </script>
 <style scoped lang="scss">
 .main {

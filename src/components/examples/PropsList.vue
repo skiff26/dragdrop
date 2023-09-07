@@ -27,7 +27,6 @@ defineProps({
 	ul {
 		& > strong {
 			display: inline-block;
-			color: var(--base-white); 
 			margin-bottom: 10px;
 		}
 		li {
@@ -46,7 +45,8 @@ defineProps({
 					display: inline-block;
 					margin-right: 5px;
 					border-radius: 8px;
-					background: var(--c-bg-card);
+					background-color: var(--c-bg-card);
+					transition: background-color 0.3s ease;
 					padding: 8px;
 					color: var(--base-grey);
 					@media (max-width: 600px) {

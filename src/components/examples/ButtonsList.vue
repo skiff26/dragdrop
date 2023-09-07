@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import BaseIcon from '@/components/BaseIcon.vue';
+import BaseIcon from '@/components/BaseIcon.vue'
 
 defineProps({
 	link: {
@@ -28,9 +28,9 @@ defineProps({
 	&__view-code {
 		padding: 12px 20px;
 		border-radius: 8px;
-		color: var(--base-white);
+		color: var(--c-text);
 		font-weight: 600;
-		background-color: #2f2f2f;
+		background-color: var(--c-bg-card);
 		transition: all 0.3s ease 0s;
 		display: flex;
 		align-items: center;
@@ -39,9 +39,9 @@ defineProps({
 			transition: all 0.3s ease 0s;
 		}
 		&:hover {
-			background: #3a3a3a;
+			background: var(--c-bg-btn-code-hover);
 			svg {
-				fill: white;
+				fill: var(--media-fill);
 			}
 		}
 	}
