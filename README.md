@@ -1,29 +1,29 @@
 # Drag And Drop Components for Vue.js
-
 Improve Your Web App with Seamless Drag and Drop Integration.
 
-## Recommended IDE Setup
+## Advantages
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. **Library essence** - Vue.js Drag and Drop is a simple, ready-to-use solution for adding drag-and-drop functionality to your web application. You can easily integrate it by simply copying and pasting our pre-built components.
+2. **User-friendly experience** - Add dragging functionality to your Vue.js project with just a few lines of code. Our Drag and Drop feature is straightforward and intuitive. Our components are built using Vue 3 with the Composition API.
+3. **No extra installations** - With Vue.js Drag and Drop, there's no hassle of additional dependencies. Easily integrate our components into your project and enjoy seamless element dragging.
 
-## Customize configuration
+## Documentation
+- [Introduction](https://skiff26.github.io/dragdrop/#/docs/introduction)
+- [Quick Start](https://skiff26.github.io/dragdrop/#/docs/start)
+- [Tutorial](https://skiff26.github.io/dragdrop/#/docs/tutorial)
+- [Props and Emits](https://skiff26.github.io/dragdrop/#/docs/props-and-emits)
+- [Support](https://skiff26.github.io/dragdrop/#/docs/support)
+- [FAQ](https://skiff26.github.io/dragdrop/#/docs/faq)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Components
+- [Simple](https://skiff26.github.io/dragdrop/#/examples/simple)
+- [Trello](https://skiff26.github.io/dragdrop/#/examples/trello)
+- [Clone](https://skiff26.github.io/dragdrop/#/examples/clone)
+- [Clone on control](https://skiff26.github.io/dragdrop/#/examples/controlclone)
+- [Trash](https://skiff26.github.io/dragdrop/#/examples/trash)
+- [Avatar](https://skiff26.github.io/dragdrop/#/examples/avatar)
+- [File Upload](https://skiff26.github.io/dragdrop/#/examples/upload)
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## License
+Copyright ©2023 - present  
+Artem Kulchytskyi
