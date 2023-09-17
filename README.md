@@ -25,5 +25,5 @@ Improve Your Web App with Seamless Drag and Drop Integration.
 - [File Upload](https://skiff26.github.io/dragdrop/#/examples/upload)
 
 ## License
-Copyright ©2023 - present  
-Artem Kulchytskyi
+[MIT](https://github.com/skiff26/dragdrop/blob/main/LICENSE.md)  
+Copyright ©2023 - present, Artem Kulchytskyi
