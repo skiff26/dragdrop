@@ -17,6 +17,7 @@ const groups = [
 		links: [
 			{ name: 'Simple', link: 'simple' },
 			{ name: 'Trello', link: 'trello' },
+			{ name: 'Handle', link: 'handle' },
 		]
 	},
 	{

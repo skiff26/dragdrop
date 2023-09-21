@@ -37,6 +37,12 @@ const router = createRouter({
 				meta: { title: 'Example - Trello' }
 			},
 			{
+				path: 'handle',
+				name: 'handle',
+				component: () => import('../views/examples/HandleView.vue'),
+				meta: { title: 'Example - Handle' }
+			},
+			{
 				path: 'clone',
 				name: 'clone',
 				component: () => import('../views/examples/CloneView.vue'),
