@@ -15,6 +15,7 @@
 				<div class="nav__dark-mode-switcher">
 					<AppearanceSwitcher />
 				</div>
+				<span class="nav__line"></span>
 				<ul class="nav__media">
 					<li class="nav__media-item" v-for="item in mediaElements" :key="item.name">
 						<a :href="item.link" target="_blank"><BaseIcon :name="item.name"/></a>
