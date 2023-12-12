@@ -8,7 +8,8 @@
 			<nav class="header__nav nav">
 				<ul class="nav__list">
 					<li class="nav__list-item" v-for="item in navitationElements" :key="item.name">
-						<router-link :class="{'nav-item-active' : item.link === $route.matched[0]?.name}" :to="{ name: item.link }">{{ item.name }}</router-link>
+						<router-link :class="{ 'nav-item-active': item.link === $route.matched[0]?.name }"
+							:to="{ name: item.link }">{{ item.name }}</router-link>
 					</li>
 				</ul>
 				<span class="nav__line"></span>
@@ -18,22 +19,25 @@
 				<span class="nav__line"></span>
 				<ul class="nav__media">
 					<li class="nav__media-item" v-for="item in mediaElements" :key="item.name">
-						<a :href="item.link" target="_blank"><BaseIcon :name="item.name"/></a>
+						<a :href="item.link" target="_blank">
+							<BaseIcon :name="item.name" />
+						</a>
 					</li>
 				</ul>
 			</nav>
 			<div class="header__menu">
-				<BaseIcon name="menu" wh="30" @click="toggleMobileNav()"/>
+				<BaseIcon name="menu" wh="30" @click="toggleMobileNav()" />
 			</div>
 			<transition name="nav">
 				<div class="header__nav-popup nav-popup" v-if="isMobileNavOpen">
 					<div class="nav-popup__header">
 						<span>Menu</span>
-						<BaseIcon name="close" wh="30" @click="toggleMobileNav()"/>
+						<BaseIcon name="close" wh="30" @click="toggleMobileNav()" />
 					</div>
 					<div class="nav-popup__body">
 						<ul class="nav-popup__list">
-							<li class="nav-popup__list-item" v-for="item in navitationElements" :key="item.name" @click="toggleMobileNav()">
+							<li class="nav-popup__list-item" v-for="item in navitationElements" :key="item.name"
+								@click="toggleMobileNav()">
 								<router-link :to="{ name: item.link }">{{ item.name }}</router-link>
 							</li>
 						</ul>
@@ -43,7 +47,9 @@
 						</div>
 						<ul class="nav-popup__media">
 							<li class="nav-popup__media-item" v-for="item in mediaElements" :key="item.name">
-								<a :href="item.link" target="_blank"><BaseIcon :name="item.name" wh="28"/></a>
+								<a :href="item.link" target="_blank">
+									<BaseIcon :name="item.name" wh="28" />
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -95,15 +101,14 @@ const mediaElements = [
 <style scoped>
 .nav-enter-active,
 .nav-leave-active {
-  transition: all 0.3s ease;
-  transform: rotateY(0deg);
-  opacity: 1;
+	transition: all 0.3s ease;
+	transform: rotateY(0deg);
+	opacity: 1;
 }
 
 .nav-enter-from,
 .nav-leave-to {
-  opacity: 0;
-  transform-origin: 0 0;
-  transform: rotateX(-90deg);
-}
-</style>
+	opacity: 0;
+	transform-origin: 0 0;
+	transform: rotateX(-90deg);
+}</style>

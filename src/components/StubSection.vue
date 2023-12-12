@@ -19,21 +19,25 @@ defineProps({
 	color: var(--c-text);
 	background-color: var(--c-bg-card);
 	border-radius: 8px;
+
 	&.withMargin {
 		margin: 30px auto;
+
 		@media (max-width: 670px) {
 			margin: 20px 0px;
 		}
 	}
+
 	h1 {
 		font-size: 30px;
 	}
+
 	@media (max-width: 670px) {
 		padding: 20px;
+
 		h1 {
 			font-size: 23px;
 			line-height: 1.3;
 		}
 	}
-}
-</style>
+}</style>

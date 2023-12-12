@@ -1,4 +1,5 @@
 # Drag And Drop Components for Vue.js
+
 Improve Your Web App with Seamless Drag and Drop Integration.
 
 ## Advantages
@@ -8,6 +9,7 @@ Improve Your Web App with Seamless Drag and Drop Integration.
 3. **No extra installations** - With Vue.js Drag and Drop, there's no hassle of additional dependencies. Easily integrate our components into your project and enjoy seamless element dragging.
 
 ## Documentation
+
 - [Introduction](https://skiff26.github.io/dragdrop/#/docs/introduction)
 - [Quick Start](https://skiff26.github.io/dragdrop/#/docs/start)
 - [Tutorial](https://skiff26.github.io/dragdrop/#/docs/tutorial)
@@ -16,8 +18,10 @@ Improve Your Web App with Seamless Drag and Drop Integration.
 - [FAQ](https://skiff26.github.io/dragdrop/#/docs/faq)
 
 ## Components
+
 - [Simple](https://skiff26.github.io/dragdrop/#/examples/simple)
 - [Trello](https://skiff26.github.io/dragdrop/#/examples/trello)
+- [Handle](https://skiff26.github.io/dragdrop/#/examples/handle)
 - [Clone](https://skiff26.github.io/dragdrop/#/examples/clone)
 - [Clone on control](https://skiff26.github.io/dragdrop/#/examples/controlclone)
 - [Trash](https://skiff26.github.io/dragdrop/#/examples/trash)
@@ -25,5 +29,6 @@ Improve Your Web App with Seamless Drag and Drop Integration.
 - [File Upload](https://skiff26.github.io/dragdrop/#/examples/upload)
 
 ## License
+
 [MIT](https://github.com/skiff26/dragdrop/blob/main/LICENSE.md)  
 Copyright ©2023 - present, Artem Kulchytskyi

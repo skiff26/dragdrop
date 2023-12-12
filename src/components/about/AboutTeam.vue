@@ -1,7 +1,7 @@
 <template>
 	<section class="team">
 		<h2 class="team__title">Creator</h2>
-		<PersonCard :team="team"/>
+		<PersonCard :team="team" />
 	</section>
 </template>
 
@@ -37,10 +37,12 @@ const team = [
 .team {
 	margin-top: 30px;
 	margin-bottom: 60px;
+
 	@media (max-width: 768px) {
 		margin-top: 20px;
 		margin-bottom: 40px;
 	}
+
 	&__title {
 		color: var(--c-text);
 		font-size: 30px;

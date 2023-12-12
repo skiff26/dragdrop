@@ -31,33 +31,37 @@ const articles = [
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 25px;
+
 	@media (max-width: 920px) {
 		gap: 15px;
 		padding: 25px 0;
 	}
 }
+
 .info__article {
 	max-width: 260px;
 	background: var(--c-bg-card);
 	padding: 18px;
 	border-radius: 8px;
 	transition: all 0.3s ease 0s;
+
 	&:hover {
 		background: var(--base-green);
+
 		p {
 			color: var(--base-white);
 		}
 	}
+
 	h2 {
 		color: var(--c-header-card);
 		font-size: 20px;
 		font-weight: 600;
 		margin-bottom: 15px;
 	}
+
 	p {
 		color: var(--c-text-card);
 		line-height: 1.5;
 	}
-}
-
-</style>
+}</style>
