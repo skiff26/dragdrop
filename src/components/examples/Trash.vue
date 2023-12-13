@@ -10,8 +10,8 @@
 		</div>
 		<div class="drop-zone">
 			<h3>Remove item</h3>
-			<div class="drop-trash" @dragstart="startDrag($event)" @drop="onDrop($event)"
-				@dragover.prevent="onOverTrash($event)" @dragleave.prevent="onLeaveTrash($event)" @dragenter.prevent>
+			<div class="trash" :class="{ over: overTrash }" @dragstart="startDrag($event)" @drop="onDrop($event)"
+				@dragover.prevent="overTrash = true" @dragleave.prevent="overTrash = false" @dragenter.prevent>
 				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 16 16"
 					data-testid="trash">
 					<path
@@ -23,12 +23,15 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 const { items } = defineProps({
 	items: {
 		type: Array,
 		requried: true
 	}
 })
+
+const overTrash = ref(false)
 
 const startDrag = (event, item) => {
 	event.dataTransfer.dropEffect = 'copy'
@@ -49,29 +52,8 @@ const onDropSort = (event, droppedItem) => {
 	items.splice(droppedItemPosition, 0, item)
 }
 
-const onOverTrash = (event) => {
-	if (event.target.localName === 'div') {
-		event.target.classList.add('over-trash')
-	} else if (event.target.localName === 'svg') {
-		event.target.parentNode.classList.add('over-trash')
-	} else if (event.target.localName === 'path') {
-		event.target.parentNode.parentNode.classList.add('over-trash')
-	}
-}
-const onLeaveTrash = (event) => {
-	if (event.target.localName === 'div') {
-		event.target.classList.toggle('over-trash')
-	}
-	if (event.target.localName === 'svg') {
-		event.target.parentNode.classList.toggle('over-trash')
-	}
-	if (event.target.localName === 'path') {
-		event.target.parentNode.parentNode.classList.toggle('over-trash')
-	}
-}
-
 const onDrop = (event) => {
-	onLeaveTrash(event)
+	overTrash.value = false
 	const itemId = event.dataTransfer.getData('itemId')
 	const itemPosition = items.findIndex((item) => item.id == itemId)
 	items.splice(itemPosition, 1)
@@ -125,7 +107,7 @@ const onDrop = (event) => {
 	}
 }
 
-.drop-trash {
+.trash {
 	background-color: var(--c-border, #363636);
 	height: 100px;
 	max-width: 100px;
@@ -134,14 +116,14 @@ const onDrop = (event) => {
 	align-items: center;
 	justify-content: center;
 	cursor: grab;
-	transition: all 0.3s ease 0s;
+	transition: all 0.3s ease;
 	margin: 20px auto;
 
 	&:hover {
 		background-color: var(--c-bg-btn, #2e2e2e);
 	}
 
-	&.over-trash {
+	&.over {
 		background-color: rgb(184, 28, 28);
 		color: white;
 	}
