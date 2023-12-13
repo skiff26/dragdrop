@@ -27,19 +27,22 @@ defineProps({
 	border-radius: 8px;
 	display: flex;
 	justify-content: space-between;
+
 	@media (max-width: 768px) {
 		padding: 15px;
 		margin: 15px auto;
 	}
+
 	@media (max-width: 520px) {
 		flex-direction: column;
 		row-gap: 15px;
 	}
+
 	pre {
 		text-align: left;
+
 		@media (max-width: 425px) {
 			font-size: 14px;
 		}
 	}
-}
-</style>
+}</style>

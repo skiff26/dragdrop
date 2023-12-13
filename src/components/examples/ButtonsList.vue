@@ -1,6 +1,8 @@
 <template>
 	<div class="buttons">
-		<a class="buttons__view-code" target="_blank" :href="link"><BaseIcon name="github" wh="20"/>View code</a>
+		<a class="buttons__view-code" target="_blank" :href="link">
+			<BaseIcon name="github" wh="20" />View code
+		</a>
 	</div>
 </template>
 
@@ -22,9 +24,11 @@ defineProps({
 	justify-content: center;
 	padding-top: 20px;
 	border-top: 1px solid var(--c-border);
+
 	@media (max-width: 768px) {
 		padding-top: 15px;
 	}
+
 	&__view-code {
 		padding: 12px 20px;
 		border-radius: 8px;
@@ -35,15 +39,17 @@ defineProps({
 		display: flex;
 		align-items: center;
 		gap: 7px;
+
 		svg {
 			transition: all 0.3s ease 0s;
 		}
+
 		&:hover {
 			background: var(--c-bg-btn-code-hover);
+
 			svg {
 				fill: var(--media-fill);
 			}
 		}
 	}
-}
-</style>
+}</style>
