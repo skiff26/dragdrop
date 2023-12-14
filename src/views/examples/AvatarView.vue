@@ -1,11 +1,11 @@
 <template>
 	<section class="main__example example">
 		<h1 class="example__title">Avatar</h1>
-		<Avatar @upload="uploadFile" @delete="items = []"/>
+		<Avatar @upload="uploadFile" @delete="items = ['Files must be in jpeg or png format.']" />
 		<CodePre :items="items" />
 		<PropsList :list="propsList" />
 		<PropsList :list="emitsList" emit />
-		<ButtonsList link="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/Avatar.vue"/>  
+		<ButtonsList link="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/Avatar.vue" />
 	</section>
 </template>
 
@@ -16,7 +16,7 @@ import CodePre from '@/components/examples/CodePre.vue'
 import PropsList from '@/components/examples/PropsList.vue'
 import ButtonsList from '@/components/examples/ButtonsList.vue'
 
-const items = ref([])
+const items = ref(['Files must be in jpeg or png format.'])
 
 const propsList = [
 	{ name: 'trash', text: 'Boolean - add trash for delete image. Default = true.' },

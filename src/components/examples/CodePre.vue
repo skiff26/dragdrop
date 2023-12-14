@@ -27,6 +27,7 @@ defineProps({
 	border-radius: 8px;
 	display: flex;
 	justify-content: space-between;
+	overflow-x: auto;
 
 	@media (max-width: 768px) {
 		padding: 15px;
@@ -45,4 +46,5 @@ defineProps({
 			font-size: 14px;
 		}
 	}
-}</style>
+}
+</style>
