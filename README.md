@@ -1,6 +1,7 @@
 # Drag And Drop Components for Vue.js
 
-Improve Your Web App with Seamless Drag and Drop Integration.
+Improve Your Web App with Seamless Drag and Drop Integration.  
+[Video Tutorial](https://youtu.be/NfteKvQ943s)
 
 ## Advantages
 
