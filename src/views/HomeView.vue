@@ -5,11 +5,11 @@ import HomeInfo from '@/components/home/HomeInfo.vue'
 </script>
 
 <template>
-		<div class="main__container">
-			<HomeWelcome />
-		</div>
-		<HomeSponsors />
-		<div class="main__container">
-			<HomeInfo />	
-		</div>
+  <div class="main__container">
+    <HomeWelcome />
+  </div>
+  <HomeSponsors />
+  <div class="main__container">
+    <HomeInfo />
+  </div>
 </template>

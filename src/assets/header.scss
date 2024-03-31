@@ -125,7 +125,9 @@
   z-index: 5;
   background-color: var(--c-bg);
   overflow: auto;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   &__header {
     height: 55px;
     display: flex;

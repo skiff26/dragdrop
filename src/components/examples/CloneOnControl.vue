@@ -1,18 +1,44 @@
 <template>
   <div class="demo">
-    <div class="drop-zone" @drop="onDrop($event, 1)" @dragenter.prevent @dragover.prevent>
+    <div
+      class="drop-zone"
+      @drop="onDrop($event, 1)"
+      @dragenter.prevent
+      @dragover.prevent
+    >
       <h3>First list</h3>
-      <div class="drag-el" v-for="item in firstList" :key="item.id" draggable="true"
-        @dragstart="startDrag($event, item, 1)" @drop.stop="onDropSort($event, item, 1)"
-        @dragover.prevent="onOver($event)" @dragleave.prevent="onLeave($event)" @dragenter.prevent>
+      <div
+        class="drag-el"
+        v-for="item in firstList"
+        :key="item.id"
+        draggable="true"
+        @dragstart="startDrag($event, item, 1)"
+        @drop.stop="onDropSort($event, item, 1)"
+        @dragover.prevent="onOver($event)"
+        @dragleave.prevent="onLeave($event)"
+        @dragenter.prevent
+      >
         {{ item.title }} id: {{ item.id }}
       </div>
     </div>
-    <div class="drop-zone" @drop="onDrop($event, 2)" @dragenter.prevent @dragover.prevent>
+    <div
+      class="drop-zone"
+      @drop="onDrop($event, 2)"
+      @dragenter.prevent
+      @dragover.prevent
+    >
       <h3>Second list</h3>
-      <div class="drag-el" v-for="item in secondList" :key="item.id" draggable="true"
-        @dragstart="startDrag($event, item, 2)" @drop.stop="onDropSort($event, item, 2)"
-        @dragover.prevent="onOver($event)" @dragleave.prevent="onLeave($event)" @dragenter.prevent>
+      <div
+        class="drag-el"
+        v-for="item in secondList"
+        :key="item.id"
+        draggable="true"
+        @dragstart="startDrag($event, item, 2)"
+        @drop.stop="onDropSort($event, item, 2)"
+        @dragover.prevent="onOver($event)"
+        @dragleave.prevent="onLeave($event)"
+        @dragenter.prevent
+      >
         {{ item.title }} id: {{ item.id }}
       </div>
     </div>
@@ -38,15 +64,20 @@ const startDrag = (event, item, list) => {
   event.dataTransfer.setData('itemList', list)
 }
 
-const onOver = (event) => event.target.classList.add('on-over')
-const onLeave = (event) => event.target.classList.remove('on-over')
+const onOver = event => event.target.classList.add('on-over')
+const onLeave = event => event.target.classList.remove('on-over')
 
-const generateId = (arr) => arr.length ? Math.max(...arr.map(item => item.id)) + 1 : 0
-const getItemPosition = (arr, itemId) => arr.findIndex((item) => item.id == itemId)
+const generateId = arr =>
+  arr.length ? Math.max(...arr.map(item => item.id)) + 1 : 0
+const getItemPosition = (arr, itemId) =>
+  arr.findIndex(item => item.id == itemId)
 
 const getItemById = (event, list) => {
   const itemId = +event.dataTransfer.getData('itemId')
-  const item = list === 1 ? firstList.find((item) => item.id == itemId) : secondList.find((item) => item.id == itemId)
+  const item =
+    list === 1
+      ? firstList.find(item => item.id == itemId)
+      : secondList.find(item => item.id == itemId)
   return { item, itemId }
 }
 
@@ -56,7 +87,8 @@ const moveItem = (from, to, itemPosition, droppedItemPosition, item) => {
 }
 
 const changeList = (event, list, droppedItem, listNumber) => {
-  const { item, itemId } = listNumber === 1 ? getItemById(event, 1) : getItemById(event)
+  const { item, itemId } =
+    listNumber === 1 ? getItemById(event, 1) : getItemById(event)
   const itemPosition = getItemPosition(list, itemId)
   const droppedItemPosition = getItemPosition(list, droppedItem.id)
   list.splice(itemPosition, 1)
@@ -68,8 +100,14 @@ const onDropSort = (event, droppedItem, list) => {
   const itemList = +event.dataTransfer.getData('itemList')
   const { item, itemId } = getItemById(event, itemList)
 
-  const itemPosition = getItemPosition(itemList === 1 ? firstList : secondList, itemId)
-  const droppedItemPosition = getItemPosition(list === 1 ? firstList : secondList, droppedItem.id)
+  const itemPosition = getItemPosition(
+    itemList === 1 ? firstList : secondList,
+    itemId
+  )
+  const droppedItemPosition = getItemPosition(
+    list === 1 ? firstList : secondList,
+    droppedItem.id
+  )
 
   if (itemList === 1 && list === 2) {
     moveItem(firstList, secondList, itemPosition, droppedItemPosition, item)
@@ -140,7 +178,6 @@ const onDrop = (event, list) => {
 .drag-el {
   padding: 10px 15px;
   background-color: var(--c-border, #363636);
-  ;
   border: 1px solid var(--c-border, #363636);
   border-radius: 8px;
   cursor: grab;

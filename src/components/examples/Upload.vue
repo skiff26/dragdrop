@@ -2,11 +2,26 @@
   <div class="demo">
     <label for="upload" class="drop-zone">
       <div class="drop-zone__label">File upload</div>
-      <div class="drop-zone__field" :class="{ 'withFiles': data.length, 'error': error }" @drop.prevent="fileUpload"
-        @dragenter.prevent @dragover.prevent>
-        <input ref="fileInputRef" type="file" id="upload" @change="fileUpload">
+      <div
+        class="drop-zone__field"
+        :class="{ withFiles: data.length, error: error }"
+        @drop.prevent="fileUpload"
+        @dragenter.prevent
+        @dragover.prevent
+      >
+        <input
+          ref="fileInputRef"
+          type="file"
+          id="upload"
+          @change="fileUpload"
+        />
         <div class="files" v-if="data.length">
-          <div class="file" v-for="file in data" :key="file.name" @click.prevent.stop="deleteFile(file)">
+          <div
+            class="file"
+            v-for="file in data"
+            :key="file.name"
+            @click.prevent.stop="deleteFile(file)"
+          >
             <ul>
               <li><strong>Name: </strong>{{ file.name }}</li>
               <li><strong>Size: </strong>{{ sizeToMb(file.size) + 'MB' }}</li>
@@ -47,12 +62,14 @@ const data = ref([])
 const fileInputRef = ref(null)
 const error = ref('')
 
-const sizeToMb = (size) => Math.max(0.01, (size / (1024 * 1024)).toFixed(2))
+const sizeToMb = size => Math.max(0.01, (size / (1024 * 1024)).toFixed(2))
 
-const fileUpload = (event) => {
+const fileUpload = event => {
   error.value = ''
-  const file = event.target?.files?.length > 0
-    ? event.target.files[0] : event?.dataTransfer?.files[0]
+  const file =
+    event.target?.files?.length > 0
+      ? event.target.files[0]
+      : event?.dataTransfer?.files[0]
 
   if (file === undefined) return
 
@@ -70,7 +87,11 @@ const fileUpload = (event) => {
     return
   }
 
-  if (data.value.findIndex(item => item.name === file.name && item.type === file.type) !== -1) {
+  if (
+    data.value.findIndex(
+      item => item.name === file.name && item.type === file.type
+    ) !== -1
+  ) {
     error.value = 'This file has already been uploaded.'
     return
   }
@@ -85,8 +106,10 @@ const fileUpload = (event) => {
   emit('changeData', data.value)
 }
 
-const deleteFile = (file) => {
-  const filePosition = data.value.findIndex((item) => item.lastModified === file.lastModified)
+const deleteFile = file => {
+  const filePosition = data.value.findIndex(
+    item => item.lastModified === file.lastModified
+  )
 
   if (filePosition !== -1) {
     data.value.splice(filePosition, 1)

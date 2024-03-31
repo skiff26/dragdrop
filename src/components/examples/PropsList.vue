@@ -1,8 +1,11 @@
 <template>
   <div class="info">
-    <ul><strong>{{ emit ? 'Emits:' : 'Props:' }}</strong>
+    <ul>
+      <strong>{{ emit ? 'Emits:' : 'Props:' }}</strong>
       <li v-for="item in list" :key="item.name">
-        <p><strong>{{ item.name }}:</strong> {{ item.text }}</p>
+        <p>
+          <strong>{{ item.name }}:</strong> {{ item.text }}
+        </p>
       </li>
     </ul>
   </div>
@@ -26,7 +29,7 @@ defineProps({
   margin-bottom: 20px;
 
   ul {
-    &>strong {
+    & > strong {
       display: inline-block;
       margin-bottom: 10px;
     }
