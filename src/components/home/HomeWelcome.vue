@@ -5,8 +5,8 @@
       Improve Your Web App with Seamless Drag and Drop Integration!
     </p>
     <div class="section__buttons">
-      <router-link :to="{ name: 'introduction' }"
-        ><span>Get Started</span>
+      <router-link :to="{ name: 'introduction' }">
+        <span>Get Started</span>
         <BaseIcon name="rightArrowShort" color="currentColor" wh="20" />
       </router-link>
     </div>

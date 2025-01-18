@@ -1,9 +1,9 @@
 <template>
   <article class="card" v-for="person in team" :key="person.name">
     <figure class="card__image">
-      <a :href="person.media.linkedin" target="_blank"
-        ><img :src="`./about/${person.img}.jpg`" :alt="person.name"
-      /></a>
+      <a :href="person.media.linkedin" target="_blank">
+        <img :src="`./about/${person.img}.png`" :alt="person.name" />
+      </a>
     </figure>
     <div class="card__info">
       <h3 class="card__name">{{ person.name }}</h3>
@@ -16,22 +16,16 @@
           <address>{{ person.details.location }}</address>
         </li>
         <li>
-          <BaseIcon name="code" wh="16" /><a
-            :href="person.details.projects[0].link"
-            target="_blank"
-            >{{ person.details.projects[0].name }}</a
-          >
+          <BaseIcon name="code" wh="16" />
+          <a :href="person.details.projects[0].link" target="_blank">{{ person.details.projects[0]?.name }}</a>
         </li>
         <li>
           <BaseIcon name="lang" wh="16" />
           <div>{{ person.details.languages }}</div>
         </li>
         <li>
-          <BaseIcon name="link" wh="16" /><a
-            :href="person.details.website"
-            target="_blank"
-            >{{ person.details.website }}</a
-          >
+          <BaseIcon name="link" wh="16" />
+          <a :href="person.details.website" target="_blank">{{ person.details.website }}</a>
         </li>
       </ul>
       <ul class="card__media">
@@ -52,6 +46,7 @@
 
 <script setup>
 import BaseIcon from '@/components/BaseIcon.vue'
+
 const props = defineProps({
   team: Array,
   required: true

@@ -64,13 +64,12 @@ const startDrag = (event, item, list) => {
   event.dataTransfer.setData('itemList', list)
 }
 
-const onOver = event => event.target.classList.add('on-over')
-const onLeave = event => event.target.classList.remove('on-over')
+const onOver = (event) => event.target.classList.add('on-over')
+const onLeave = (event) => event.target.classList.remove('on-over')
 
-const generateId = arr =>
-  arr.length ? Math.max(...arr.map(item => item.id)) + 1 : 0
-const getItemPosition = (arr, itemId) =>
-  arr.findIndex(item => item.id == itemId)
+const generateId = (arr) => arr.length ? Math.max(...arr.map(item => item.id)) + 1 : 0
+
+const getItemPosition = (arr, itemId) => arr.findIndex(item => item.id == itemId)
 
 const getItemById = (event, list) => {
   const itemId = +event.dataTransfer.getData('itemId')

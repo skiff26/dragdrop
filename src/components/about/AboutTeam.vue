@@ -22,7 +22,7 @@ const team = [
         }
       ],
       languages: 'English • Russian • Ukrainian',
-      website: 'https://skiff26.github.io/portfolio/'
+      website: 'https://github.com/skiff26'
     },
     media: {
       github: 'https://github.com/skiff26',

@@ -9,19 +9,9 @@
         @dragenter.prevent
         @dragover.prevent
       >
-        <input
-          ref="fileInputRef"
-          type="file"
-          id="upload"
-          @change="fileUpload"
-        />
+        <input ref="fileInputRef" type="file" id="upload" @change="fileUpload" />
         <div class="files" v-if="data.length">
-          <div
-            class="file"
-            v-for="file in data"
-            :key="file.name"
-            @click.prevent.stop="deleteFile(file)"
-          >
+          <div class="file" v-for="file in data" :key="file.name" @click.prevent.stop="deleteFile(file)">
             <ul>
               <li><strong>Name: </strong>{{ file.name }}</li>
               <li><strong>Size: </strong>{{ sizeToMb(file.size) + 'MB' }}</li>
@@ -38,6 +28,7 @@
 
 <script setup>
 import { ref } from 'vue'
+
 const emit = defineEmits(['changeData'])
 const { collection, maxSize, image, pdf } = defineProps({
   collection: {
@@ -62,9 +53,9 @@ const data = ref([])
 const fileInputRef = ref(null)
 const error = ref('')
 
-const sizeToMb = size => Math.max(0.01, (size / (1024 * 1024)).toFixed(2))
+const sizeToMb = (size) => Math.max(0.01, (size / (1024 * 1024)).toFixed(2))
 
-const fileUpload = event => {
+const fileUpload = (event) => {
   error.value = ''
   const file =
     event.target?.files?.length > 0
@@ -88,9 +79,7 @@ const fileUpload = event => {
   }
 
   if (
-    data.value.findIndex(
-      item => item.name === file.name && item.type === file.type
-    ) !== -1
+    data.value.findIndex((item) => item.name === file.name && item.type === file.type) !== -1
   ) {
     error.value = 'This file has already been uploaded.'
     return
@@ -106,11 +95,8 @@ const fileUpload = event => {
   emit('changeData', data.value)
 }
 
-const deleteFile = file => {
-  const filePosition = data.value.findIndex(
-    item => item.lastModified === file.lastModified
-  )
-
+const deleteFile = (file) => {
+  const filePosition = data.value.findIndex((item) => item.lastModified === file.lastModified)
   if (filePosition !== -1) {
     data.value.splice(filePosition, 1)
     emit('changeData', data.value)

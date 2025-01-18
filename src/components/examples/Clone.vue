@@ -56,6 +56,7 @@ const startDrag = (event, item, list) => {
   event.dataTransfer.dropEffect = 'copy'
   event.dataTransfer.effectAllowed = 'copy'
   event.dataTransfer.setData('itemId', item.id)
+
   if (list) event.dataTransfer.setData('itemList', list)
 }
 
@@ -65,6 +66,7 @@ const getItemById = (event, list) => {
     list === 1
       ? firstList.find(item => item.id == itemId)
       : secondList.find(item => item.id == itemId)
+
   return { item, itemId }
 }
 
@@ -77,8 +79,8 @@ const changeList = (event, list, droppedItem, listNumber) => {
   list.splice(droppedItemPosition, 0, item)
 }
 
-const onOver = event => event.target.classList.add('on-over')
-const onLeave = event => event.target.classList.remove('on-over')
+const onOver = (event) => event.target.classList.add('on-over')
+const onLeave = (event) => event.target.classList.remove('on-over')
 
 const onDropSort = (event, droppedItem, list) => {
   onLeave(event)
@@ -86,10 +88,8 @@ const onDropSort = (event, droppedItem, list) => {
     const { item } = getItemById(event, 1)
     const newItem = { id: secondList.length, title: 'Clone ' + item.title }
     secondList.push(newItem)
-    const itemPosition = secondList.findIndex(item => newItem.id == item.id)
-    const droppedItemPosition = secondList.findIndex(
-      item => item.id == droppedItem.id
-    )
+    const itemPosition = secondList.findIndex((item) => newItem.id == item.id)
+    const droppedItemPosition = secondList.findIndex((item) => item.id == droppedItem.id)
     secondList.splice(itemPosition, 1)
     secondList.splice(droppedItemPosition, 0, newItem)
     return
@@ -99,7 +99,7 @@ const onDropSort = (event, droppedItem, list) => {
   else changeList(event, secondList, droppedItem, list)
 }
 
-const onDrop = event => {
+const onDrop = (event) => {
   const { item } = getItemById(event, 1)
   const itemList = event.dataTransfer.getData('itemList')
   if (itemList != 2) {

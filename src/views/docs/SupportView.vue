@@ -27,15 +27,14 @@
         <ol>
           <li class="small">
             <strong>Email:</strong> Drop us an email at
-            <a href="mailto:artem.kulchitsky@gmail.com"
-              >artem.kulchitsky@gmail.com</a
-            >. Our team will review your query and get back to you as soon as
+            <a href="mailto:artem.kulchitsky@gmail.com">artem.kulchitsky@gmail.com</a>. Our team will review your query
+            and get back to you as soon as
             possible.
           </li>
           <li class="small">
             <strong>Telegram:</strong> Feel free to reach out to my personal
             Telegram account
-            <a href="https://t.me/id00909" target="_blank">@id00909</a> for any
+            <a href="https://t.me/kheskoff" target="_blank">@kheskoff</a> for any
             support-related inquiries. Whether you have questions, feedback, or
             need help with troubleshooting, I'm here to assist you.
           </li>
@@ -45,9 +44,8 @@
         <strong>Reporting Issues</strong> If you've come across a bug or
         technical glitch, please report it to us. You can submit an issue on our
         GitHub
-        <a href="https://github.com/skiff26/dragdrop" target="_blank"
-          >repository</a
-        >, providing as much detail as possible. This will help us understand
+        <a href="https://github.com/skiff26/dragdrop" target="_blank">repository</a>, providing as much detail as
+        possible. This will help us understand
         the problem and work towards a solution faster.
       </li>
     </ol>

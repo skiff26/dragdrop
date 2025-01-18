@@ -32,7 +32,7 @@
       to our Vue.js drag and drop library! Adding your unique touch to our
       library can benefit the community and enhance the variety of options
       available. You can message me on my personal
-      <a href="https://t.me/id00909" target="_blank">Telegram</a>,
+      <a href="https://t.me/kheskoff" target="_blank">Telegram</a>,
       <a href="https://www.linkedin.com/in/akulchytskyi/" target="_blank"
         >LinkedIn</a
       >, or send an <a href="mailto:artem.kulchitsky@gmail.com">email</a>.

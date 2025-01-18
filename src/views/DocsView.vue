@@ -42,6 +42,7 @@ const groups = [
     margin: 25px auto;
   }
 }
+
 .main__content {
   display: flex;
   justify-content: end;

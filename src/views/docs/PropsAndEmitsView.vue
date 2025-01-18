@@ -21,10 +21,6 @@
     </p>
     <router-link :to="{ name: 'upload' }">Go to components</router-link>
     <br />
-    <img
-      src="/docs/props-emits.png"
-      alt="Props and Emits example"
-      loading="lazy"
-    />
+    <img src="/docs/props-emits.png" alt="Props and Emits example" loading="lazy" />
   </section>
 </template>

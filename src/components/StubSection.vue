@@ -1,5 +1,5 @@
 <template>
-  <section class="stub" :class="{ withMargin: margin }">
+  <section class="stub" :class="{ 'with-margin': margin }">
     <h1>This page is under development.</h1>
   </section>
 </template>
@@ -20,7 +20,7 @@ defineProps({
   background-color: var(--c-bg-card);
   border-radius: 8px;
 
-  &.withMargin {
+  &.with-margin {
     margin: 30px auto;
 
     @media (max-width: 670px) {

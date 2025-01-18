@@ -3,18 +3,12 @@
     <div class="footer__container">
       <p class="footer__vue">
         Released under the
-        <a
-          href="https://github.com/skiff26/dragdrop/blob/main/LICENSE.md"
-          target="_blank"
-          >MIT</a
-        >
+        <a href="https://github.com/skiff26/dragdrop/blob/main/LICENSE.md" target="_blank">MIT</a>
         License.
       </p>
       <p class="footer__copy">
         Copyright © 2023
-        <a href="https://www.linkedin.com/in/akulchytskyi/" target="_blank"
-          >Artem Kulchytskyi</a
-        >
+        <a href="https://www.linkedin.com/in/akulchytskyi/" target="_blank">Artem Kulchytskyi</a>
       </p>
     </div>
   </footer>

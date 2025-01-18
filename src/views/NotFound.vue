@@ -16,12 +16,14 @@
 <style scoped lang="scss">
 .main {
   color: #e3e3e3;
+
   &__title {
     font-size: 38px;
     line-height: 1.4;
     letter-spacing: -0.02em;
     font-weight: 600;
     margin-bottom: 40px;
+
     @media (max-width: 400px) {
       margin-bottom: 30px;
       font-size: 32px;
@@ -37,23 +39,28 @@
   &__redirect {
     font-weight: 500;
     margin-bottom: 20px;
+
     a {
       transition: all 0.3s ease 0s;
       color: var(--base-green);
+
       &:hover {
         color: #42d392;
       }
     }
+
     @media (max-width: 400px) {
       margin-bottom: 10px;
     }
   }
 }
+
 .not-found {
-  background: var(--c-bg-card);
+  margin: 30px;
   padding: 30px;
   border-radius: 8px;
-  margin: 30px;
+  background: var(--c-bg-card);
+
   @media (max-width: 440px) {
     margin: 20px 0px;
   }

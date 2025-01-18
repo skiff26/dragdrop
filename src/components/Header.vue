@@ -7,18 +7,10 @@
       </div>
       <nav class="header__nav nav">
         <ul class="nav__list">
-          <li
-            class="nav__list-item"
-            v-for="item in navitationElements"
-            :key="item.name"
-          >
-            <router-link
-              :class="{
-                'nav-item-active': item.link === $route.matched[0]?.name
-              }"
-              :to="{ name: item.link }"
-              >{{ item.name }}</router-link
-            >
+          <li class="nav__list-item" v-for="item in navitationElements" :key="item.name">
+            <router-link :class="{ 'nav-item-active': item.link === $route.matched[0]?.name }" :to="{ name: item.link }">
+              {{ item.name }}
+            </router-link>
           </li>
         </ul>
         <span class="nav__line"></span>
@@ -27,11 +19,7 @@
         </div>
         <span class="nav__line"></span>
         <ul class="nav__media">
-          <li
-            class="nav__media-item"
-            v-for="item in mediaElements"
-            :key="item.name"
-          >
+          <li class="nav__media-item" v-for="item in mediaElements" :key="item.name">
             <a :href="item.link" target="_blank">
               <BaseIcon :name="item.name" />
             </a>
@@ -39,25 +27,20 @@
         </ul>
       </nav>
       <div class="header__menu">
-        <BaseIcon name="menu" wh="30" @click="toggleMobileNav()" />
+        <BaseIcon name="menu" wh="30" @click="toggleMobileNav" />
       </div>
       <transition name="nav">
         <div class="header__nav-popup nav-popup" v-if="isMobileNavOpen">
           <div class="nav-popup__header">
             <span>Menu</span>
-            <BaseIcon name="close" wh="30" @click="toggleMobileNav()" />
+            <BaseIcon name="close" wh="30" @click="toggleMobileNav" />
           </div>
           <div class="nav-popup__body">
             <ul class="nav-popup__list">
-              <li
-                class="nav-popup__list-item"
-                v-for="item in navitationElements"
-                :key="item.name"
-                @click="toggleMobileNav()"
-              >
-                <router-link :to="{ name: item.link }">{{
-                  item.name
-                }}</router-link>
+              <li class="nav-popup__list-item" v-for="item in navitationElements" :key="item.name" @click="toggleMobileNav">
+                <router-link :to="{ name: item.link }">
+                  {{ item.name }}
+                </router-link>
               </li>
             </ul>
             <div class="nav-popup__appearence">
@@ -65,11 +48,7 @@
               <AppearanceSwitcher />
             </div>
             <ul class="nav-popup__media">
-              <li
-                class="nav-popup__media-item"
-                v-for="item in mediaElements"
-                :key="item.name"
-              >
+              <li class="nav-popup__media-item" v-for="item in mediaElements" :key="item.name">
                 <a :href="item.link" target="_blank">
                   <BaseIcon :name="item.name" wh="28" />
                 </a>
@@ -85,12 +64,10 @@
 <script setup>
 import { ref } from 'vue'
 import BaseIcon from './BaseIcon.vue'
-import AppearanceSwitcher from './AppearanceSwitcher.vue'
+import AppearanceSwitcher from './appearance-switcher/AppearanceSwitcher.vue'
+
 const isMobileNavOpen = ref(false)
-const toggleMobileNav = () => {
-  isMobileNavOpen.value = !isMobileNavOpen.value
-  document.body.style.overflow = isMobileNavOpen.value ? 'hidden' : 'visible'
-}
+
 const navitationElements = [
   {
     name: 'Docs',
@@ -105,6 +82,7 @@ const navitationElements = [
     link: 'about'
   }
 ]
+
 const mediaElements = [
   {
     name: 'github',
@@ -112,13 +90,18 @@ const mediaElements = [
   },
   {
     name: 'telegram',
-    link: 'https://t.me/id00909'
+    link: 'https://t.me/kheskoff'
   },
   {
     name: 'linkedin',
     link: 'https://www.linkedin.com/in/akulchytskyi/'
   }
 ]
+
+const toggleMobileNav = () => {
+  isMobileNavOpen.value = !isMobileNavOpen.value
+  document.body.style.overflow = isMobileNavOpen.value ? 'hidden' : 'visible'
+}
 </script>
 
 <style scoped>

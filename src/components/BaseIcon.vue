@@ -9,13 +9,16 @@
     v-html="path"
   ></svg>
 </template>
+
 <script>
 import icons from '../icons'
+
 export default {
   props: ['name', 'wh', 'color'],
+
   data() {
     return {
-      path: icons[this.name]
+      path: icons[this.name],
     }
   }
 }

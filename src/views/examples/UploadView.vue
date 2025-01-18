@@ -2,12 +2,12 @@
   <section class="main__example example">
     <h1 class="example__title">Upload Files</h1>
     <Upload :collection="6" @changeData="changeData" />
-    <CodePre :items="items" />
-    <PropsList :list="propsList" />
-    <PropsList :list="emitsList" emit />
-    <ButtonsList
-      link="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/Upload.vue"
-    />
+    <CodePre :data="data" />
+    <PropList :list="props" />
+    <PropList :list="emits" emit />
+    <ButtonList>
+      <ViewCodeButton url="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/Upload.vue" />
+    </ButtonList>
   </section>
 </template>
 
@@ -15,10 +15,11 @@
 import { ref } from 'vue'
 import Upload from '@/components/examples/Upload.vue'
 import CodePre from '@/components/examples/CodePre.vue'
-import PropsList from '@/components/examples/PropsList.vue'
-import ButtonsList from '@/components/examples/ButtonsList.vue'
+import PropList from '@/components/examples/components/PropList.vue'
+import ButtonList from '@/components/examples/components/ButtonList.vue'
+import ViewCodeButton from '@/components/examples/components/ViewCodeButton.vue'
 
-const propsList = [
+const props = [
   { name: 'collection', text: 'Number | Default = 1, number of files.' },
   { name: 'maxSize', text: 'Number | Default = 5MB, maximum file size.' },
   {
@@ -31,17 +32,15 @@ const propsList = [
   }
 ]
 
-const emitsList = [{ name: 'changeData', text: 'Arguments: file or files[].' }]
+const emits = [{ name: 'changeData', text: 'Arguments: file or files[].' }]
 
-const items = ref([])
+const data = ref([])
 
-const changeData = data => {
-  items.value = data.map(file => {
-    return {
-      name: file.name,
-      size: file.size,
-      type: file.type
-    }
-  })
+const changeData = (newData) => {
+  data.value = newData.map((file) => ({
+    name: file.name,
+    size: file.size,
+    type: file.type
+  }))
 }
 </script>

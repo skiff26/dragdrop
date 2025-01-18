@@ -2,11 +2,11 @@
   <section class="main__example example">
     <h1 class="example__title">Clone on control</h1>
     <CloneOnControl :firstList="firstList" :secondList="secondList" />
-    <CodePre :items="firstList" :items2="secondList" />
-    <PropsList :list="propsList" />
-    <ButtonsList
-      link="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/CloneOnControl.vue"
-    />
+    <CodePre :data="firstList" :data2="secondList" />
+    <PropList :list="props" />
+    <ButtonList>
+      <ViewCodeButton url="https://github.com/skiff26/dragdrop/blob/main/src/components/examples/CloneOnControl.vue" />
+    </ButtonList>
   </section>
 </template>
 
@@ -14,10 +14,11 @@
 import { ref } from 'vue'
 import CloneOnControl from '@/components/examples/CloneOnControl.vue'
 import CodePre from '@/components/examples/CodePre.vue'
-import PropsList from '@/components/examples/PropsList.vue'
-import ButtonsList from '@/components/examples/ButtonsList.vue'
+import PropList from '@/components/examples/components/PropList.vue'
+import ButtonList from '@/components/examples/components/ButtonList.vue'
+import ViewCodeButton from '@/components/examples/components/ViewCodeButton.vue'
 
-const propsList = [
+const props = [
   { name: 'firstList', text: 'Object[] - items for 1 list.' },
   { name: 'secondList', text: 'Object[] - items for 2 list.' }
 ]

@@ -22,9 +22,7 @@
         @mousedown="mouseStart($event)"
         @mouseleave="mouseLeave($event)"
       >
-        <path
-          d="M10 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0-4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-4 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5-9a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
-        ></path>
+        <path d="M10 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0-4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-4 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5-9a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
       </svg>
     </div>
   </div>
@@ -38,19 +36,19 @@ const { items } = defineProps({
   }
 })
 
-const findDragEl = el => {
+const findDragEl = (el) => {
   while (el && !el.classList.contains('drag-el')) {
     el = el.parentElement
   }
   return el
 }
 
-const mouseLeave = event => {
+const mouseLeave = (event) => {
   const dragEl = findDragEl(event.target)
   if (dragEl) dragEl.setAttribute('draggable', 'false')
 }
 
-const mouseStart = event => {
+const mouseStart = (event) => {
   const dragEl = findDragEl(event.target)
   if (dragEl) dragEl.setAttribute('draggable', 'true')
 }
@@ -61,14 +59,14 @@ const startDrag = (event, item) => {
   event.dataTransfer.setData('itemId', item.id)
 }
 
-const onOver = event => {
+const onOver = (event) => {
   const dragEl = findDragEl(event.target)
   if (dragEl) {
     dragEl.classList.add('on-over')
   }
 }
 
-const onLeave = event => {
+const onLeave = (event) => {
   const dragEl = findDragEl(event.target)
   if (dragEl) {
     dragEl.classList.remove('on-over')

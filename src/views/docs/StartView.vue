@@ -22,12 +22,7 @@
       <li class="small">
         <strong>Copy the Code:</strong> Each component comes with a code
         snippet. Simply copy the code provided in the documentation.
-        <img
-          src="/docs/copy-code.png"
-          alt="Copy code button"
-          loading="lazy"
-          width="151"
-        />
+        <img src="/docs/copy-code.png" alt="Copy code button" loading="lazy" width="151" />
       </li>
       <li class="small">
         <strong>Paste into Your Project:</strong> Paste the code snippet into

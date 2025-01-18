@@ -1,17 +1,17 @@
 <template>
   <div class="code">
-    <pre>{{ items }}</pre>
-    <pre v-if="items2">{{ items2 }}</pre>
+    <pre>{{ data }}</pre>
+    <pre v-if="data2">{{ data2 }}</pre>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  items: {
+  data: {
     type: Array,
     required: true
   },
-  items2: {
+  data2: {
     type: Array
   }
 })

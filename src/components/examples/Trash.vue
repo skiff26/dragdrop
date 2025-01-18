@@ -46,6 +46,7 @@
 
 <script setup>
 import { ref } from 'vue'
+
 const { items } = defineProps({
   items: {
     type: Array,
@@ -61,23 +62,23 @@ const startDrag = (event, item) => {
   event.dataTransfer.setData('itemId', item.id)
 }
 
-const onOver = event => event.target.classList.add('on-over')
-const onLeave = event => event.target.classList.remove('on-over')
+const onOver = (event) => event.target.classList.add('on-over')
+const onLeave = (event) => event.target.classList.remove('on-over')
 
 const onDropSort = (event, droppedItem) => {
   onLeave(event)
   const itemId = event.dataTransfer.getData('itemId')
-  const item = items.find(item => item.id == itemId)
-  const itemPosition = items.findIndex(item => item.id == itemId)
-  const droppedItemPosition = items.findIndex(el => el.id == droppedItem.id)
+  const item = items.find((item) => item.id == itemId)
+  const itemPosition = items.findIndex((item) => item.id == itemId)
+  const droppedItemPosition = items.findIndex((el) => el.id == droppedItem.id)
   items.splice(itemPosition, 1)
   items.splice(droppedItemPosition, 0, item)
 }
 
-const onDrop = event => {
+const onDrop = (event) => {
   overTrash.value = false
   const itemId = event.dataTransfer.getData('itemId')
-  const itemPosition = items.findIndex(item => item.id == itemId)
+  const itemPosition = items.findIndex((item) => item.id == itemId)
   items.splice(itemPosition, 1)
 }
 </script>

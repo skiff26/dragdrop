@@ -30,14 +30,14 @@ const startDrag = (event, item) => {
   event.dataTransfer.setData('itemId', item.id)
 }
 
-const onOver = event => event.target.classList.add('on-over')
-const onLeave = event => event.target.classList.remove('on-over')
+const onOver = (event) => event.target.classList.add('on-over')
+const onLeave = (event) => event.target.classList.remove('on-over')
 
 const onDrop = (event, index) => {
   onLeave(event)
   const itemId = event.dataTransfer.getData('itemId')
-  const item = items.find(item => item.id == itemId)
-  const itemPosition = items.findIndex(item => item.id == itemId)
+  const item = items.find((item) => item.id == itemId)
+  const itemPosition = items.findIndex((item) => item.id == itemId)
   items.splice(itemPosition, 1)
   items.splice(index, 0, item)
 }

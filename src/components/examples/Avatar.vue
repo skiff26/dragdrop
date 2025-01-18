@@ -58,8 +58,10 @@
 
 <script setup>
 import { ref } from 'vue'
+
 const emit = defineEmits(['upload', 'delete'])
-const { trash } = defineProps({
+
+defineProps({
   trash: {
     type: Boolean,
     default: true
@@ -75,7 +77,7 @@ const clearValue = () => {
   }
 }
 
-const fileUpload = event => {
+const fileUpload = (event) => {
   const file =
     event.target?.files?.length > 0
       ? event.target.files[0]
@@ -137,8 +139,8 @@ const deleteFile = () => {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    cursor: pointer;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 
     &:hover {
       background-color: var(--c-bg-btn-hover, #3a3a3a);

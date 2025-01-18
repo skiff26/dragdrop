@@ -57,23 +57,23 @@ const { items, sort } = defineProps({
   }
 })
 
-const getList = list => (items ? items.filter(item => item.list == list) : [])
+const getList = (list) => (items ? items.filter(item => item.list == list) : [])
 
-const getItemById = event => {
+const getItemById = (event) => {
   const itemId = event.dataTransfer.getData('itemId')
   const item = items.find(item => item.id == itemId)
   return { item, itemId }
 }
 
-const onOver = event => (sort ? event.target.classList.add('on-over') : '')
-const onLeave = event => (sort ? event.target.classList.remove('on-over') : '')
+const onOver = (event) => (sort ? event.target.classList.add('on-over') : '')
+const onLeave = (event) => (sort ? event.target.classList.remove('on-over') : '')
 
 const onDropSort = (event, droppedItem) => {
   if (!sort) return
   onLeave(event)
   const { item, itemId } = getItemById(event)
-  const itemPosition = items.findIndex(item => item.id == itemId)
-  const droppedItemPosition = items.findIndex(item => item.id == droppedItem.id)
+  const itemPosition = items.findIndex((item) => item.id == itemId)
+  const droppedItemPosition = items.findIndex((item) => item.id == droppedItem.id)
   items.splice(itemPosition, 1)
   items.splice(droppedItemPosition, 0, item)
 }

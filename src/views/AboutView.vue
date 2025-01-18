@@ -5,10 +5,12 @@
     <AboutTeam />
   </div>
 </template>
+
 <script setup>
 import AboutLibrary from '@/components/about/AboutLibrary.vue'
 import AboutTeam from '@/components/about/AboutTeam.vue'
 </script>
+
 <style scoped lang="scss">
 .main {
   &__title {
@@ -18,6 +20,7 @@ import AboutTeam from '@/components/about/AboutTeam.vue'
     font-weight: 900;
     letter-spacing: 5px;
     text-align: center;
+
     @media (max-width: 453px) {
       margin-top: 25px;
     }

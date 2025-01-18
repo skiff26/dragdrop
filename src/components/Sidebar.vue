@@ -7,7 +7,9 @@
           :to="{ name: item.link }"
           :class="{ active: item.link === $route.name }"
           v-for="item in group.links"
-          >{{ item.name }}</router-link
+          >
+            {{ item.name }}
+          </router-link
         >
       </nav>
     </div>

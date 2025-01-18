@@ -1,10 +1,6 @@
 <template>
   <section class="main__info info">
-    <article
-      class="info__article"
-      v-for="article in articles"
-      :key="article.title"
-    >
+    <article class="info__article" v-for="article in articles" :key="article.title">
       <h2>{{ article.title }}</h2>
       <p>{{ article.text }}</p>
     </article>

@@ -131,13 +131,13 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
-/*--------------------*/
+
 body {
   background-color: var(--vt-c-black);
   transition: background-color 0.3s ease;
 }
-body,
-html {
+
+body, html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -145,18 +145,22 @@ html {
   background-color: var(--c-bg);
   color-scheme: var(--color-scheme);
 }
+
 .wrapper {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .main {
   flex: 1 1 auto;
+
   @media (min-width: 650px) {
     padding-top: var(--vt-nav-height);
   }
 }
+
 [class*='__container'] {
   max-width: 1200px;
   margin: 0 auto;
